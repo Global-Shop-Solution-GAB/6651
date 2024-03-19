@@ -1,0 +1,2759 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.FormBOM..create(BaseForm)
+Gui.FormBOM..caption("Bill of Material")
+Gui.FormBOM..size(13140,9270)
+Gui.FormBOM..minx(0)
+Gui.FormBOM..miny(0)
+Gui.FormBOM..position(0,0)
+Gui.FormBOM..event(UnLoad,Unload)
+Gui.FormBOM..alwaysontop(False)
+Gui.FormBOM..fontname("Arial")
+Gui.FormBOM..fontsize(8)
+Gui.FormBOM..forecolor(0)
+Gui.FormBOM..BackColor(15790320)
+Gui.FormBOM..controlbox(True)
+Gui.FormBOM..maxbutton(True)
+Gui.FormBOM..minbutton(True)
+Gui.FormBOM..mousepointer(0)
+Gui.FormBOM..moveable(True)
+Gui.FormBOM..sizeable(False)
+Gui.FormBOM..ShowInTaskBar(True)
+Gui.FormBOM..titlebar(True)
+Gui.FormBOM.frame1.create(frame)
+Gui.FormBOM.frame1.caption("")
+Gui.FormBOM.frame1.size(12570,8475)
+Gui.FormBOM.frame1.position(105,45)
+Gui.FormBOM.frame1.visible(True)
+Gui.FormBOM.frame1.borderstyle(0)
+Gui.FormBOM.frame1.fontname("Arial")
+Gui.FormBOM.frame1.fontsize(8)
+Gui.FormBOM.frame1.Enabled(True)
+Gui.FormBOM.frame1.Zorder(0)
+Gui.FormBOM.gsflexgrid2.create(gsflexgrid)
+Gui.FormBOM.gsflexgrid2.visible(True)
+Gui.FormBOM.gsflexgrid2.size(12300,6735)
+Gui.FormBOM.gsflexgrid2.zorder(0)
+Gui.FormBOM.gsflexgrid2.position(195,1020)
+Gui.FormBOM.gsflexgrid2.enabled(True)
+Gui.FormBOM.gsflexgrid2.parent("frame1")
+Gui.FormBOM.gsflexgrid2.FontName("Tahoma")
+Gui.FormBOM.gsflexgrid2.FontSize(8.25)
+Gui.FormBOM.cmdLoad.create(button)
+Gui.FormBOM.cmdLoad.caption("Upload BOM")
+Gui.FormBOM.cmdLoad.visible(True)
+Gui.FormBOM.cmdLoad.size(1335,375)
+Gui.FormBOM.cmdLoad.zorder(0)
+Gui.FormBOM.cmdLoad.position(200,7875)
+Gui.FormBOM.cmdLoad.enabled(True)
+Gui.FormBOM.cmdLoad.parent("frame1")
+Gui.FormBOM.cmdLoad.fontname("Arial")
+Gui.FormBOM.cmdLoad.fontsize(7)
+Gui.FormBOM.cmdLoad.event(Click,cmdUploadBOM_Click)
+Gui.FormBOM.cmdLoad.defaultvalue("")
+Gui.FormBOM.cmdLoad.controlgroup(0)
+Gui.FormBOM.cmdLoad.tabstop(True)
+Gui.FormBOM.cmdLoad.tabindex(1)
+Gui.FormBOM.txtParent.create(textbox,"",True,2670,300,0,200,350,False,0,"Arial",7,16777215,1)
+Gui.FormBOM.txtParent.parent("frame1")
+Gui.FormBOM.txtParent.defaultvalue("")
+Gui.FormBOM.txtParent.controlgroup(0)
+Gui.FormBOM.txtParent.tabstop(True)
+Gui.FormBOM.txtParent.tabindex(11)
+Gui.FormBOM.txtRev.create(textbox,"",True,780,300,0,2945,350,False,0,"Arial",7,16777215,1)
+Gui.FormBOM.txtRev.parent("frame1")
+Gui.FormBOM.txtRev.defaultvalue("")
+Gui.FormBOM.txtRev.controlgroup(0)
+Gui.FormBOM.txtDescription.create(textbox,"",True,4725,270,0,3810,345,False,0,"Arial",7,16777215,1)
+Gui.FormBOM.txtDescription.parent("frame1")
+Gui.FormBOM.txtDescription.defaultvalue("")
+Gui.FormBOM.txtDescription.controlgroup(0)
+Gui.FormBOM.lbl7.create(label,"Parent Number",True,1500,225,1,200,185,True,0,"Arial",7,15790320,0,0)
+Gui.FormBOM.lbl7.parent("frame1")
+Gui.FormBOM.lbl7.defaultvalue("")
+Gui.FormBOM.lbl7.controlgroup(0)
+Gui.FormBOM.lbl7.BorderStyle(0)
+Gui.FormBOM.lbl8.create(label,"Rev",True,735,225,1,2945,185,True,0,"Arial",7,15790320,0,0)
+Gui.FormBOM.lbl8.parent("frame1")
+Gui.FormBOM.lbl8.defaultvalue("")
+Gui.FormBOM.lbl8.controlgroup(0)
+Gui.FormBOM.lbl8.BorderStyle(0)
+Gui.FormBOM.lbl9.create(label,"Description",True,1500,225,1,3815,185,True,0,"Arial",7,15790320,0,0)
+Gui.FormBOM.lbl9.parent("frame1")
+Gui.FormBOM.lbl9.defaultvalue("")
+Gui.FormBOM.lbl9.controlgroup(0)
+Gui.FormBOM.lbl9.BorderStyle(0)
+Gui.FormBOM.lbl5.create(label,"Design Bill of Material",True,2400,255,1,200,715,True,0,"Arial",10,-2147483633,0,0)
+Gui.FormBOM.lbl5.parent("frame1")
+Gui.FormBOM.lbl5.defaultvalue("")
+Gui.FormBOM.lbl5.controlgroup(0)
+Gui.FormBOM.lbl5.BorderStyle(0)
+Gui.FormBOM.txtClx.create(textbox,"",False,495,300,0,8700,405,True,0,"Arial",8,-2147483643,1)
+Gui.FormBOM.txtClx.defaultvalue("")
+Gui.FormBOM.txtClx.controlgroup(0)
+Gui.F_File_Select..create(BaseForm)
+Gui.F_File_Select..caption("Select File And BOM Type")
+Gui.F_File_Select..size(5130,3270)
+Gui.F_File_Select..minx(0)
+Gui.F_File_Select..miny(0)
+Gui.F_File_Select..position(11550,5670)
+Gui.F_File_Select..event(UnLoad,unload)
+Gui.F_File_Select..alwaysontop(False)
+Gui.F_File_Select..fontname("Arial")
+Gui.F_File_Select..fontsize(8)
+Gui.F_File_Select..forecolor(0)
+Gui.F_File_Select..BackColor(-2147483633)
+Gui.F_File_Select..controlbox(True)
+Gui.F_File_Select..maxbutton(False)
+Gui.F_File_Select..minbutton(True)
+Gui.F_File_Select..mousepointer(0)
+Gui.F_File_Select..moveable(True)
+Gui.F_File_Select..sizeable(False)
+Gui.F_File_Select..ShowInTaskBar(True)
+Gui.F_File_Select..titlebar(True)
+Gui.F_File_Select.lbl1.create(label,"XML Parse File",True,1155,255,1,200,200,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_File_Select.lbl1.defaultvalue("")
+Gui.F_File_Select.lbl1.controlgroup(0)
+Gui.F_File_Select.lbl1.BorderStyle(0)
+Gui.F_File_Select.txtXMLFile.create(textbox,"",True,4035,300,0,200,400,False,0,"Arial",8,-2147483643,1)
+Gui.F_File_Select.txtXMLFile.defaultvalue("")
+Gui.F_File_Select.txtXMLFile.controlgroup(0)
+Gui.F_File_Select.cmdFileBrowse.create(button)
+Gui.F_File_Select.cmdFileBrowse.caption("^")
+Gui.F_File_Select.cmdFileBrowse.visible(True)
+Gui.F_File_Select.cmdFileBrowse.size(450,375)
+Gui.F_File_Select.cmdFileBrowse.zorder(0)
+Gui.F_File_Select.cmdFileBrowse.position(4300,355)
+Gui.F_File_Select.cmdFileBrowse.enabled(True)
+Gui.F_File_Select.cmdFileBrowse.fontname("Arial")
+Gui.F_File_Select.cmdFileBrowse.fontsize(8)
+Gui.F_File_Select.cmdFileBrowse.event(Click,cmdfilebrowse_click)
+Gui.F_File_Select.cmdFileBrowse.defaultvalue("")
+Gui.F_File_Select.cmdFileBrowse.controlgroup(0)
+Gui.F_File_Select.cmdFileOk.create(button)
+Gui.F_File_Select.cmdFileOk.caption("Ok")
+Gui.F_File_Select.cmdFileOk.visible(True)
+Gui.F_File_Select.cmdFileOk.size(855,390)
+Gui.F_File_Select.cmdFileOk.zorder(0)
+Gui.F_File_Select.cmdFileOk.position(200,2170)
+Gui.F_File_Select.cmdFileOk.enabled(True)
+Gui.F_File_Select.cmdFileOk.fontname("Arial")
+Gui.F_File_Select.cmdFileOk.fontsize(8)
+Gui.F_File_Select.cmdFileOk.event(Click,cmdfileok_click)
+Gui.F_File_Select.cmdFileOk.defaultvalue("")
+Gui.F_File_Select.cmdFileOk.controlgroup(0)
+Gui.F_File_Select.ddlWashdown.create(dropdownlist)
+Gui.F_File_Select.ddlWashdown.visible(True)
+Gui.F_File_Select.ddlWashdown.size(2000,330)
+Gui.F_File_Select.ddlWashdown.zorder(0)
+Gui.F_File_Select.ddlWashdown.position(200,1150)
+Gui.F_File_Select.ddlWashdown.enabled(True)
+Gui.F_File_Select.ddlWashdown.fontname("Arial")
+Gui.F_File_Select.ddlWashdown.fontsize(8)
+Gui.F_File_Select.ddlWashdown.defaultvalue("")
+Gui.F_File_Select.ddlWashdown.controlgroup(0)
+Gui.F_File_Select.lblWashdown.create(label,"Wash Down or Non-Wash Down",True,2505,255,1,200,880,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_File_Select.lblWashdown.defaultvalue("")
+Gui.F_File_Select.lblWashdown.controlgroup(0)
+Gui.F_File_Select.lblWashdown.BorderStyle(0)
+Gui.F_Router_Review..create(BaseForm)
+Gui.F_Router_Review..caption("Router Review")
+Gui.F_Router_Review..size(12180,6570)
+Gui.F_Router_Review..minx(0)
+Gui.F_Router_Review..miny(0)
+Gui.F_Router_Review..position(0,0)
+Gui.F_Router_Review..event(UnLoad,F_Router_Review_UnLoad)
+Gui.F_Router_Review..alwaysontop(False)
+Gui.F_Router_Review..fontname("Arial")
+Gui.F_Router_Review..fontsize(8)
+Gui.F_Router_Review..forecolor(0)
+Gui.F_Router_Review..BackColor(-2147483633)
+Gui.F_Router_Review..controlbox(True)
+Gui.F_Router_Review..maxbutton(False)
+Gui.F_Router_Review..minbutton(True)
+Gui.F_Router_Review..mousepointer(0)
+Gui.F_Router_Review..moveable(True)
+Gui.F_Router_Review..sizeable(False)
+Gui.F_Router_Review..ShowInTaskBar(True)
+Gui.F_Router_Review..titlebar(True)
+Gui.F_Router_Review.gsfgLines.create(gsflexgrid)
+Gui.F_Router_Review.gsfgLines.visible(True)
+Gui.F_Router_Review.gsfgLines.size(11595,5190)
+Gui.F_Router_Review.gsfgLines.zorder(0)
+Gui.F_Router_Review.gsfgLines.position(200,200)
+Gui.F_Router_Review.gsfgLines.enabled(True)
+Gui.F_Router_Review.gsfgLines.FontName("Tahoma")
+Gui.F_Router_Review.gsfgLines.FontSize(8.25)
+Gui.F_Router_Review.cmdUpload.create(button)
+Gui.F_Router_Review.cmdUpload.caption("Upload Router")
+Gui.F_Router_Review.cmdUpload.visible(True)
+Gui.F_Router_Review.cmdUpload.size(1440,375)
+Gui.F_Router_Review.cmdUpload.zorder(0)
+Gui.F_Router_Review.cmdUpload.position(200,5450)
+Gui.F_Router_Review.cmdUpload.enabled(True)
+Gui.F_Router_Review.cmdUpload.fontname("Arial")
+Gui.F_Router_Review.cmdUpload.fontsize(8)
+Gui.F_Router_Review.cmdUpload.event(Click,cmdUpload_Click)
+Gui.F_Router_Review.cmdUpload.defaultvalue("")
+Gui.F_Router_Review.cmdUpload.controlgroup(0)
+Program.Sub.ScreenSU.End
+Program.Sub.Preflight.Start
+Variable.UDT.uXML.Define("Level",String)
+Variable.UDT.uXML.Define("Sequence",String)
+Variable.UDT.uXML.Define("Count",String)
+Variable.UDT.uXML.Define("Parent",String)
+Variable.UDT.uXML.Define("BB_Length",String)
+Variable.UDT.uXML.Define("BB_Width",String)
+Variable.UDT.uXML.Define("CL_Outer",String)
+Variable.UDT.uXML.Define("Bends",String)
+Variable.UDT.uXML.Define("BB_Area",String)
+Variable.UDT.uXML.Define("BB_Area_Blank",String)
+Variable.UDT.uXML.Define("Sheet_Metal_Thickness",String)
+Variable.UDT.uXML.Define("Material",String)
+Variable.UDT.uXML.Define("Weight",String)
+Variable.UDT.uXML.Define("CL_Inner",String)
+Variable.UDT.uXML.Define("Vendor",String)
+Variable.UDT.uXML.Define("Source",String)
+Variable.UDT.uXML.Define("Serial_Part_Number",String)
+Variable.UDT.uXML.Define("Manuf_Part_Number",String)
+Variable.UDT.uXML.Define("Serial_NO",String)
+Variable.UDT.uXML.Define("SP",String)
+Variable.UDT.uXML.Define("Manuf_Part_No_Non_Washdown",String)
+Variable.UDT.uXML.Define("Manuf_Part_No_Washdown",String)
+Variable.UDT.uXML.Define("TimeWeld",String)
+Variable.UDT.uXML.Define("Time_Assembly",String)
+Variable.UDT.uXML.Define("Hole_Count",String)
+Variable.UDT.uXML.Define("Length",String)
+Variable.UDT.uXML.Define("Raw_Material",String)
+Variable.UDT.uXML.Define("Name",String)
+Variable.UDT.uXML.Define("Reference_Count",String)
+Variable.UDT.uXML.Define("Part_NO",String)
+Variable.UDT.uXML.Define("Description",String)
+Variable.UDT.uXML.Define("Configuration",String)
+Variable.UDT.uXML.Define("Original_Part_No",String)
+Variable.uGlobal.uXML.Declare("uXML")
+Variable.Global.Wash.Declare(String)
+Variable.UDT.uXMLCopy.Define("Level",String)
+Variable.UDT.uXMLCopy.Define("Sequence",String)
+Variable.UDT.uXMLCopy.Define("Count",String)
+Variable.UDT.uXMLCopy.Define("Parent",String)
+Variable.UDT.uXMLCopy.Define("BB_Length",String)
+Variable.UDT.uXMLCopy.Define("BB_Width",String)
+Variable.UDT.uXMLCopy.Define("CL_Outer",String)
+Variable.UDT.uXMLCopy.Define("Bends",String)
+Variable.UDT.uXMLCopy.Define("BB_Area",String)
+Variable.UDT.uXMLCopy.Define("BB_Area_Blank",String)
+Variable.UDT.uXMLCopy.Define("Sheet_Metal_Thickness",String)
+Variable.UDT.uXMLCopy.Define("Material",String)
+Variable.UDT.uXMLCopy.Define("Weight",String)
+Variable.UDT.uXMLCopy.Define("CL_Inner",String)
+Variable.UDT.uXMLCopy.Define("Vendor",String)
+Variable.UDT.uXMLCopy.Define("Source",String)
+Variable.UDT.uXMLCopy.Define("Serial_Part_Number",String)
+Variable.UDT.uXMLCopy.Define("Manuf_Part_Number",String)
+Variable.UDT.uXMLCopy.Define("Serial_NO",String)
+Variable.UDT.uXMLCopy.Define("SP",String)
+Variable.UDT.uXMLCopy.Define("Manuf_Part_No_Non_Washdown",String)
+Variable.UDT.uXMLCopy.Define("Manuf_Part_No_Washdown",String)
+Variable.UDT.uXMLCopy.Define("TimeWeld",String)
+Variable.UDT.uXMLCopy.Define("Time_Assembly",String)
+Variable.UDT.uXMLCopy.Define("Hole_Count",String)
+Variable.UDT.uXMLCopy.Define("Length",String)
+Variable.UDT.uXMLCopy.Define("Raw_Material",String)
+Variable.UDT.uXMLCopy.Define("Name",String)
+Variable.UDT.uXMLCopy.Define("Reference_Count",String)
+Variable.UDT.uXMLCopy.Define("Part_NO",String)
+Variable.UDT.uXMLCopy.Define("Description",String)
+Variable.UDT.uXMLCopy.Define("Configuration",String)
+Variable.UDT.uXMLCOPY.Define("Original_Part_No",String)
+Variable.uGlobal.uXMLCopy.Declare("uXMLCopy")
+Variable.UDT.uXMLCBOM.Define("Level",String)
+Variable.UDT.uXMLCBOM.Define("Sequence",String)
+Variable.UDT.uXMLCBOM.Define("Count",String)
+Variable.UDT.uXMLCBOM.Define("Parent",String)
+Variable.UDT.uXMLCBOM.Define("BB_Length",String)
+Variable.UDT.uXMLCBOM.Define("BB_Width",String)
+Variable.UDT.uXMLCBOM.Define("CL_Outer",String)
+Variable.UDT.uXMLCBOM.Define("Bends",String)
+Variable.UDT.uXMLCBOM.Define("BB_Area",String)
+Variable.UDT.uXMLCBOM.Define("BB_Area_Blank",String)
+Variable.UDT.uXMLCBOM.Define("Sheet_Metal_Thickness",String)
+Variable.UDT.uXMLCBOM.Define("Material",String)
+Variable.UDT.uXMLCBOM.Define("Weight",String)
+Variable.UDT.uXMLCBOM.Define("CL_Inner",String)
+Variable.UDT.uXMLCBOM.Define("Vendor",String)
+Variable.UDT.uXMLCBOM.Define("Source",String)
+Variable.UDT.uXMLCBOM.Define("Serial_Part_Number",String)
+Variable.UDT.uXMLCBOM.Define("Manuf_Part_Number",String)
+Variable.UDT.uXMLCBOM.Define("Serial_NO",String)
+Variable.UDT.uXMLCBOM.Define("SP",String)
+Variable.UDT.uXMLCBOM.Define("Manuf_Part_No_Non_Washdown",String)
+Variable.UDT.uXMLCBOM.Define("Manuf_Part_No_Washdown",String)
+Variable.UDT.uXMLCBOM.Define("TimeWeld",String)
+Variable.UDT.uXMLCBOM.Define("Time_Assembly",String)
+Variable.UDT.uXMLCBOM.Define("Hole_Count",String)
+Variable.UDT.uXMLCBOM.Define("Length",String)
+Variable.UDT.uXMLCBOM.Define("Raw_Material",String)
+Variable.UDT.uXMLCBOM.Define("Name",String)
+Variable.UDT.uXMLCBOM.Define("Reference_Count",String)
+Variable.UDT.uXMLCBOM.Define("Part_NO",String)
+Variable.UDT.uXMLCBOM.Define("Description",String)
+Variable.UDT.uXMLCBOM.Define("Configuration",String)
+Variable.uGlobal.uXMLCBOM.Declare("uXMLCBOM")
+Variable.Global.iRouterCounter.Declare(Long,0)
+Variable.Global.bPartBatch.Declare(Boolean,False)
+Variable.UDT.uBOm.Define("Parent",String)
+Variable.UDT.uBOm.Define("Seq",String)
+Variable.UDT.uBOm.Define("Part",String)
+Variable.UDT.uBOm.Define("DESC",String)
+Variable.UDT.uBOm.Define("Quantity",Float)
+Variable.UDT.uBOm.Define("Source",String)
+Variable.UDT.uBOm.Define("UM",String)
+Variable.UDT.uBOm.Define("Category",String)
+Variable.UDT.uBOm.Define("Level",String)
+Variable.UDT.uBOm.Define("Orig_Part_NO",String)
+Variable.UDT.uBOm.Define("Memo2",String)
+variable.uGlobal.uBOM.Declare("uBOM")
+Variable.Global.sBOM.Declare(String)
+Variable.Global.Irtrubound.Declare(Long,0)
+Variable.UDT.uSerialParent.Define("sSerial",String)
+Variable.UDT.uSerialParent.Define("sParent",String)
+Variable.uGlobal.uSerialParent.Declare("uSerialParent")
+Variable.UDT.uINV1.Define("Part",String)
+Variable.UDT.uINV1.Define("AltDesc1",String)
+Variable.uGlobal.uINV1.Declare("uINV1")
+Variable.Global.sError.Declare(String)
+Program.External.Include.Library("GCG_3701_Router_UPL.lib")
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+'open connection
+F.odbc.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+'initiate our udt.
+V.uGlobal.uXML.Redim(-1,-1)
+v.uGlobal.uBOM.Redim(-1,-1) 
+v.uGlobal.uINV1.Redim(-1,-1)
+Function.Intrinsic.Control.CallSub(Buildstyle)
+'add washdown and non-wash down to the drop down list
+Gui.F_File_Select.ddlWashdown.AddItem("Wash Down")
+Gui.F_File_Select.ddlWashdown.AddItem("Non-Wash Down")
+'show screen to load xml
+Gui.F_File_Select..Show
+F.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.End
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.Load_XML.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.sQuery.Declare(String)
+V.Local.sXMLFQN.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.bEOFR.Declare(Boolean)
+V.Local.bEOFV.Declare(Boolean)
+V.Local.iUB.Declare(Long)
+V.Local.sVal.Declare(String)
+V.Local.sXMLFQN.Set(V.Args.FQN) 
+'let them know we are running.
+F.Intrinsic.UI.InvokeWaitDialog("Reading XML File....")
+'Load XMl
+'F.Global.XML.LoadDocument("XML",V.Local.sXMLFQN,False,False,False,False)
+F.Global.XML.LoadDocument("XML",V.Local.sXMLFQN,False,False,False,False)
+'Set our 2 XML queries.
+V.Local.sQuery.Set("//Rows/Row/Values/NameValuePair/Name")
+F.Global.XML.Query("XML","Rows",V.Local.sQuery,False)
+V.Local.sQuery.Set("//Rows/Row/Values/NameValuePair/Value")
+F.Global.XML.Query("XML","Value",V.Local.sQuery,False)
+F.Intrinsic.Control.DoUntil(V.Local.bEOFR,=,True)
+	'Rows xquery just gives us the name of the thing we need to set.
+'	F.Global.XML.ReadNodeSetValue("XML","Rows","text",V.Local.sRet.trim)
+		'Value xquery gives us the name and the value of the value.
+		F.Global.XML.ReadNodeSetValue("XML","Rows","text",V.Local.sRet.trim)
+		F.Global.XML.ReadNodeSetValue("XML","Value","text",V.Local.sVal.Trim)
+		'Increase our UDT
+		F.Intrinsic.Control.If(V.Local.sRet.UCase,=,"LEVEL")
+			F.Intrinsic.Control.If(V.uGlobal.uXML.UBound,=,-1)
+				V.uGlobal.uXML.Redim(0,0)
+				V.Local.iUB.Set(0)
+			Function.Intrinsic.Control.Else
+				F.Intrinsic.Math.Add(V.uGlobal.uxml.UBound,1,V.Local.iUB)
+				V.uGlobal.uxml.RedimPreserve(0,V.Local.iUB)
+			Function.Intrinsic.Control.EndIf
+		Function.Intrinsic.Control.EndIf
+		Function.Intrinsic.Control.SelectCase(V.Local.sRet.UCase)
+			Function.Intrinsic.Control.Case("LEVEL")
+				V.uGlobal.uXML(v.Local.iUB)!Level.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("SEQUENCE")
+				V.uGlobal.uXML(v.Local.iUB)!Sequence.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("COUNT")
+				V.uGlobal.uXML(v.Local.iUB)!Count.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("PARENT")
+				V.uGlobal.uXML(v.Local.iUB)!Parent.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("BOUNDING BOX LENGTH")
+				V.uGlobal.uXML(v.Local.iUB)!BB_Length.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("BOUNDING BOX WIDTH")
+				V.uGlobal.uXML(v.Local.iUB)!BB_Width.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("CUTTING LENGTH-OUTER")
+				V.uGlobal.uXML(v.Local.iUB)!CL_Outer.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("CUTTING LENGTH-INNER")
+				V.uGlobal.uXML(v.Local.iUB)!CL_Inner.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("BENDS")
+				V.uGlobal.uXML(v.Local.iUB)!Bends.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("BOUNDING BOX AREA")
+				V.uGlobal.uXML(v.Local.iUB)!BB_Area.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("BOUNDING BOX AREA-BLANK")
+				V.uGlobal.uXML(v.Local.iUB)!BB_Area_Blank.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("SHEET METAL THICKNESS")
+				V.uGlobal.uXML(v.Local.iUB)!Sheet_Metal_Thickness.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("MATERIAL")
+				V.uGlobal.uXML(v.Local.iUB)!Material.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("WEIGHT")
+				V.uGlobal.uXML(v.Local.iUB)!Weight.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("VENDOR")
+					V.uGlobal.uXML(v.Local.iUB)!Vendor.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("SOURCE")
+				V.uGlobal.uXML(v.Local.iUB)!Source.Set(V.Local.sVal)
+			'REPLACED CATEGORY WITH CONFIGURATION
+			Function.Intrinsic.Control.Case("CONFIGURATION")
+				V.uGlobal.uXML(v.Local.iUB)!Configuration.Set(V.Local.sVal)
+	'		Function.Intrinsic.Control.Case("CATEGORY")
+	'			V.uGlobal.uXML(v.Local.iUB)!Category.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("SERIAL PART NUMBER")
+				V.uGlobal.uXML(v.Local.iUB)!Serial_Part_Number.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("MANUFACTURER PART NUMBER")
+				V.uGlobal.uXML(v.Local.iUB)!Manuf_Part_Number.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("SERIAL NO.")
+				V.uGlobal.uXML(v.Local.iUB)!Serial_NO.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("SP")
+				V.uGlobal.uXML(v.Local.iUB)!SP.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("MANU PART NO. NON-WASHDOWN")
+				V.uGlobal.uXML(v.Local.iUB)!Manuf_Part_No_Non_Washdown.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("MANU PART NO. WASHDOWN")
+				V.uGlobal.uXML(v.Local.iUB)!Manuf_Part_No_Washdown.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("TIMEWELD")
+				V.uGlobal.uXML(v.Local.iUB)!TimeWeld.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("TIMEASSEMBLY")
+				V.uGlobal.uXML(v.Local.iUB)!Time_Assembly.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("HOLECOUNT")
+				V.uGlobal.uXML(v.Local.iUB)!Hole_Count.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("LENGTH")
+				V.uGlobal.uXML(v.Local.iUB)!length.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("RAW MATERIAL")
+			V.uGlobal.uXML(v.Local.iUB)!Raw_Material.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("NAME")
+				V.uGlobal.uXML(v.Local.iUB)!Name.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("REFERENCE COUNT")
+				V.uGlobal.uXML(v.Local.iUB)!Reference_Count.Set(V.Local.sVal)
+			Function.Intrinsic.Control.Case("PARTNO")
+				V.uGlobal.uXML(v.Local.iUB)!Part_NO.Set(V.Local.sVal)
+				v.uGlobal.uXML(v.Local.iUB)!Original_Part_No.Set(v.Local.sVal)
+			Function.Intrinsic.Control.Case("DESCRIPTION")
+				V.uGlobal.uXML(v.Local.iUB)!Description.Set(V.Local.sVal)
+			Function.Intrinsic.Control.CaseElse
+				Function.Intrinsic.Debug.SetLA("Node: ",V.Local.sRet.UCase," not found within Select statement. With Value: ",V.Local.sVal)
+		Function.Intrinsic.Control.EndSelect
+'	F.Global.XML.Next("XML","Rows",V.Local.bEOFR)	
+	F.Global.XML.Next("XML","Value",V.Local.bEOFV)
+	F.Global.XML.Next("XML","Rows",V.Local.bEOFR)
+F.Intrinsic.Control.Loop
+F.Intrinsic.UI.CloseWaitDialog
+
+v.Local.sUDTString.Declare
+f.Intrinsic.Variable.UDTToString(V.uGlobal.uXML,"Level*!*Sequence*!*Count*!*Parent*!*BB_Length*!*BB_Width*!*CL_Outer*!*Bends*!*BB_Area*!*BB_Area_Blank*!*Sheet_Metal_Thickness*!*Material*!*Weight*!*CL_Inner*!*Vendor*!*Source*!*Serial_Part_Number*!*Manuf_Part_Number*!*Serial_NO*!*SP*!*Manuf_Part_No_Non_Washdown*!*Manuf_Part_No_Washdown*!*TimeWeld*!*Time_Assembly*!*Hole_Count*!*Length*!*Raw_Material*!*Name*!*Reference_Count*!*Part_NO*!*Description*!*Configuration*!*Original_Part_No",v.Ambient.NewLine,"@&@",v.Local.sUDTString)
+
+f.Data.Datatable.CreateFromString("dtTEst",v.Local.sUDTString,"Level*!*Sequence*!*Count*!*Parent*!*BB_Length*!*BB_Width*!*CL_Outer*!*Bends*!*BB_Area*!*BB_Area_Blank*!*Sheet_Metal_Thickness*!*Material*!*Weight*!*CL_Inner*!*Vendor*!*Source*!*Serial_Part_Number*!*Manuf_Part_Number*!*Serial_NO*!*SP*!*Manuf_Part_No_Non_Washdown*!*Manuf_Part_No_Washdown*!*TimeWeld*!*Time_Assembly*!*Hole_Count*!*Length*!*Raw_Material*!*Name*!*Reference_Count*!*Part_NO*!*Description*!*Configuration*!*Original_Part_No","String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String","@&@",v.Ambient.NewLine,true)
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.Load_XML.End
+
+Program.Sub.Unload.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+'close connection to the database
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.Unload.End
+
+Program.Sub.cmdfilebrowse_click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+Variable.Local.sFile.Declare(String)
+Variable.Local.sDir.Declare(String)
+F.Intrinsic.String.Build("{0}\Select File",V.Caller.FilesDir,V.Local.sDir)
+Function.Intrinsic.UI.ShowOpenFileDialog("","xml|*xml",Variable.Local.sDir,Variable.Local.sFile)
+Function.Intrinsic.Control.If(Variable.Local.sFile,<>,"***CANCEL***")
+	Gui.F_File_Select.txtXMLFile.Text(Variable.Local.sFile)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdfilebrowse_click.End
+
+Program.Sub.cmdfileok_click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.sFile.Declare(String)
+'set FQN path from the textbox.
+V.Local.sFile.Set(V.Screen.F_File_Select!txtXMLFile.Text)
+
+'f.Data.Datatable.CreateFromXML("dtTEst",v.Local.sFile,true)
+'f.Data.Datatable.CreateDatasetFromXML("dtTEst",v.Local.sFile,true)
+
+
+'check to make sure wash down or non wash down have been selected
+F.Intrinsic.Control.If(V.Screen.F_File_Select!ddlWashdown.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Please select either Wash Down or Non-Wash Down")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.If(V.Local.sFile.Trim,<>,"")
+	Gui.F_File_Select..Visible(False)
+	'call load xml sub.
+
+	Function.Intrinsic.Control.CallSub(Load_xml,"FQN",V.Local.sFile.Trim)
+	'check to see if wash down or non wash down was selected
+	F.Intrinsic.Control.If(V.Screen.F_File_Select!ddlWashdown.Text,=,"Wash Down")
+		V.Global.Wash.Set("Wash Down")
+		'call the wash down sub
+		F.Intrinsic.Control.CallSub(Washdown)
+	F.intrinsic.Control.ElseIf(V.Screen.F_File_Select!ddlWashdown.Text,=,"Non-Wash Down")
+		V.Global.Wash.Set("Non-Wash Down")
+		'call the non-wash down sub
+		F.Intrinsic.Control.CallSub(Nonwashdown)
+	F.Intrinsic.Control.EndIf
+	'call the router logic sub
+	F.Intrinsic.UI.InvokeWaitDialog("Preparing Router Review...") 
+	F.Intrinsic.Control.CallSub(Routerlogic)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdfileok_click.End
+
+Program.Sub.WashDown.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.i.Declare(Long)
+V.Local.spart.Declare(String)
+V.Local.ssource.Declare(String)
+V.Local.bsource.Declare(Boolean)
+V.Local.snosource.Declare(String)
+V.Local.snosource2.Declare(String)
+v.Local.sTemp.Declare(String)
+v.Local.sRet.Declare(STring) 
+v.Local.sPart_Prefix.Declare
+
+'loop through the flexgrid to check source attributes
+F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uXML.LBound,V.uGlobal.uXML.UBound,1)
+
+'	F.Intrinsic.Control.if(v.uGlobal.uxml(v.Local.i)!Part_NO.trim,=,"050.405")
+'	Function.Intrinsic.Control.EndIf
+
+	Function.Intrinsic.Control.If(v.uGlobal.uxml(v.Local.i)!Part_NO.Trim,<>,"")
+		'check to see if the source attribute is purchase	
+		Function.Intrinsic.Control.CallSub(finddesignator,"Part",V.uGlobal.uXML(v.Local.i)!Part_NO) 
+		F.Intrinsic.Control.If(V.uGlobal.uXML(v.Local.i)!Source,=,"Purchase","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"P")
+			F.Intrinsic.Control.If(v.Args.sRet.Trim,<>,"") 
+				'check that value. 
+				'purchased, and the designator will be -w, unless the part has an existing designator. 
+	'			if there is an existing designator of -P change that to -W. 
+				F.Intrinsic.Control.If(v.Local.sret.Trim,=,"-P") 
+					'have to change to -W. 'this should grab the last -? whatever letter is in there and replace it with -W
+					F.Intrinsic.String.RegExReplace(v.Local.sPart.Trim,"-[A-Z]$","-W",True,v.Local.sRet)
+					F.Intrinsic.variable.UDTMultiSeekSet(v.uGlobal.uxml!Parent,v.uGlobal.uXML(v.Local.i)!Part_NO.Trim,v.uGlobal.uXML!Parent,v.Local.sRet.Trim)
+					v.uGlobal.uXML(v.Local.i)!Part_NO.Set(V.Local.sRet.Trim)
+				Function.Intrinsic.Control.EndIf						
+			Function.Intrinsic.Control.Else 
+				'designator doesn't exist add a -w to the end of the part. 
+				F.Intrinsic.String.Build("{0}-W",v.uGlobal.uXML(v.Local.i)!Part_NO.Trim,v.Local.sTemp)
+				F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uGlobal.uXML(v.Local.i)!Part_NO.Trim,v.uGlobal.uxml!Parent,v.Local.sTemp.Trim)
+				v.uGlobal.uxml(v.Local.i)!Part_NO.Set(v.Local.sTemp.Trim)	
+				F.Intrinsic.String.Build("{0}-W",v.uGlobal.uXML(v.Local.i)!Serial_Part_Number.Trim,v.Local.sTemp)	
+				v.uGlobal.uXML(v.Local.i)!Serial_Part_Number.Set(v.Local.sTemp)
+			Function.Intrinsic.Control.EndIf
+			'============BP - 03/21/2022 ========================
+			f.Intrinsic.String.Left(V.uGlobal.uXML(v.Local.i)!Part_NO,2,v.Local.sPart_Prefix)
+			f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+				F.Intrinsic.String.Build("{0}-S",V.uGlobal.uXML(v.Local.i)!Part_NO.Trim,v.Local.sTemp) 	
+			f.Intrinsic.Control.EndIf
+			f.Intrinsic.String.Left(V.uGlobal.uXML(v.Local.i)!Part_NO,1,v.Local.sPart_Prefix)
+			f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+				F.Intrinsic.String.Build("{0}-S",V.uGlobal.uXML(v.Local.i)!Part_NO.Trim,v.Local.sTemp) 	
+			f.Intrinsic.Control.EndIf
+			V.uGlobal.uXML(v.Local.i)!Part_NO.Set(v.Local.sTemp.Trim)
+			'====================================================
+			'check to see if the source is manufacture
+		F.Intrinsic.Control.ElseIf(V.uGlobal.uXML(v.Local.i)!Source,=,"Manufacture","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"M")
+			'if source is manufacutre we are setting the designator as -S unless that has an existing designator.
+			'if it does we do nothing. 	 
+			Function.Intrinsic.Control.If(v.Args.sRet.Trim,=,"") 
+				'meaning it doesn't have one, append a -s into our part number end. 
+				F.Intrinsic.String.Build("{0}-S",v.uGlobal.uxml(v.Local.i)!Part_NO.Trim,v.Local.sTemp) 
+				F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uGlobal.uXML(v.Local.i)!Part_NO.Trim,v.uGlobal.uxml!Parent,v.Local.sTemp.Trim)
+				v.uGlobal.uxml(v.Local.i)!Part_NO.Set(v.Local.sTemp.Trim)
+				F.Intrinsic.String.Build("{0}-S",v.uGlobal.uXML(v.Local.i)!Serial_Part_Number.Trim,v.Local.sTemp)	
+				v.uGlobal.uXML(v.Local.i)!Serial_Part_Number.Set(v.Local.sTemp)			
+			Function.Intrinsic.Control.EndIf
+			'============BP - 03/21/2022 ========================
+				
+				f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,2,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+					F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,1,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+					F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				v.uglobal.uXML(v.local.i)!Raw_Material.Set(v.Local.sTemp.Trim)
+				'====================================================
+		F.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.EndIf
+	
+	'check raw Raw_Material node too. 
+	F.Intrinsic.Control.If(v.uGlobal.uxml(v.Local.i)!Raw_Material.Trim,<>,"") 
+		Function.Intrinsic.Control.CallSub(finddesignator,"Part",v.uGlobal.uXML(v.Local.i)!Raw_Material) 
+		
+		F.Intrinsic.Control.If(V.uGlobal.uXML(v.Local.i)!Source,=,"Purchase","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"P")
+			F.Intrinsic.Control.If(v.Args.sRet.Trim,<>,"") 
+				'check that value. 
+				'purchased, and the designator will be -w, unless the part has an existing designator. 
+	'			if there is an existing designator of -P change that to -W. 
+				F.Intrinsic.Control.If(v.Local.sret.Trim,=,"-P") 
+					'have to change to -W. 'this should grab the last -? whatever letter is in there and replace it with -W
+					F.Intrinsic.String.RegExReplace(v.Local.sPart.Trim,"-[A-Z]$","-W",True,v.Local.sRet)
+'					F.Intrinsic.variable.UDTMultiSeekSet(v.uGlobal.uxml!Parent,v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.uGlobal.uXML!Parent,v.Local.sRet.Trim)
+'					v.uglobal.uXML(v.local.i)!Raw_Material.Set(V.Local.sRet.Trim)	
+					'============BP - 03/21/2022 ========================
+					f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,2,v.Local.sPart_Prefix)
+					f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+						F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+					f.Intrinsic.Control.EndIf
+					f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,1,v.Local.sPart_Prefix)
+					f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+						F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+					f.Intrinsic.Control.EndIf
+					v.uglobal.uXML(v.local.i)!Raw_Material.Set(v.Local.sTemp.Trim)
+					'====================================================
+				Function.Intrinsic.Control.EndIf						
+			Function.Intrinsic.Control.Else 
+				'designator doesn't exist add a -w to the end of the part. 
+				F.Intrinsic.String.Build("{0}-W",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp)
+'				F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.uGlobal.uxml!Parent,v.Local.sTemp.Trim)
+'				v.uglobal.uXML(v.local.i)!Raw_Material.Set(v.Local.sTemp.Trim)	
+			Function.Intrinsic.Control.EndIf
+			'check to see if the source is manufacture
+		F.Intrinsic.Control.ElseIf(V.uGlobal.uXML(v.Local.i)!Source,=,"Manufacture","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"M")
+			'if source is manufacutre we are setting the designator as -S unless that has an existing designator.
+			'if it does we do nothing. 	 
+			Function.Intrinsic.Control.If(v.Args.sRet.Trim,=,"") 
+				'meaning it doesn't have one, append a -s into our part number end. 
+				F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 
+'				F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.uGlobal.uxml!Parent,v.Local.sTemp.Trim)
+'				v.uglobal.uXML(v.local.i)!Raw_Material.Set(v.Local.sTemp.Trim)
+				'============BP - 03/21/2022 ========================
+				f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,2,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+					F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,1,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+					F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				v.uglobal.uXML(v.local.i)!Raw_Material.Set(v.Local.sTemp.Trim)
+				'====================================================
+			Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.EndIf
+	
+	
+	'check raw Serialref node too. 
+	F.Intrinsic.Control.If(v.uGlobal.uxml(v.Local.i)!Serial_Part_Number.Trim,<>,"") 
+		Function.Intrinsic.Control.CallSub(finddesignator,"Part",v.uGlobal.uXML(v.Local.i)!Serial_Part_Number) 
+		
+		F.Intrinsic.Control.If(V.uGlobal.uXML(v.Local.i)!Source,=,"Purchase","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"P")
+			F.Intrinsic.Control.If(v.Args.sRet.Trim,<>,"") 
+				'check that value. 
+				'purchased, and the designator will be -w, unless the part has an existing designator. 
+	'			if there is an existing designator of -P change that to -W. 
+				F.Intrinsic.Control.If(v.Local.sret.Trim,=,"-P") 
+					'have to change to -W. 'this should grab the last -? whatever letter is in there and replace it with -W
+					F.Intrinsic.String.RegExReplace(v.Local.sPart.Trim,"-[A-Z]$","-W",True,v.Local.sRet)
+'					F.Intrinsic.variable.UDTMultiSeekSet(v.uGlobal.uxml!Parent,v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.uGlobal.uXML!Parent,v.Local.sRet.Trim)
+'					v.uglobal.uXML(v.local.i)!Raw_Material.Set(V.Local.sRet.Trim)	
+				Function.Intrinsic.Control.EndIf						
+			Function.Intrinsic.Control.Else 
+				'designator doesn't exist add a -w to the end of the part. 
+				F.Intrinsic.String.Build("{0}-W",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp)
+'				F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.uGlobal.uxml!Parent,v.Local.sTemp.Trim)
+				v.uglobal.uXML(v.local.i)!Serial_Part_Number.Set(v.Local.sTemp.Trim)
+				'============BP - 03/21/2022 ========================
+				
+				f.Intrinsic.String.Left(v.uGlobal.uXML(v.Local.i)!Serial_Part_Number,2,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+					F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.String.Left(v.uGlobal.uXML(v.Local.i)!Serial_Part_Number,1,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+					F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				v.uglobal.uXML(v.local.i)!Serial_Part_Number.Set(v.Local.sTemp.Trim)
+				'====================================================
+			Function.Intrinsic.Control.EndIf
+			'check to see if the source is manufacture
+		F.Intrinsic.Control.ElseIf(V.uGlobal.uXML(v.Local.i)!Source,=,"Manufacture","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"M")
+			'if source is manufacutre we are setting the designator as -S unless that has an existing designator.
+			'if it does we do nothing. 	 
+			Function.Intrinsic.Control.If(v.Args.sRet.Trim,=,"") 
+				'meaning it doesn't have one, append a -s into our part number end. 
+				F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp) 
+'				F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.uGlobal.uxml!Parent,v.Local.sTemp.Trim)
+				v.uglobal.uXML(v.local.i)!Serial_Part_Number.Set(v.Local.sTemp.Trim)		
+			Function.Intrinsic.Control.EndIf
+			'============BP - 03/21/2022 ========================
+			f.Intrinsic.String.Left(v.uGlobal.uXML(v.Local.i)!Serial_Part_Number,2,v.Local.sPart_Prefix)
+			f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+				F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp) 	
+			f.Intrinsic.Control.EndIf
+			f.Intrinsic.String.Left(v.uGlobal.uXML(v.Local.i)!Serial_Part_Number,1,v.Local.sPart_Prefix)
+			f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+				F.Intrinsic.String.Build("{0}-S",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp) 	
+			f.Intrinsic.Control.EndIf
+			v.uglobal.uXML(v.local.i)!Serial_Part_Number.Set(v.Local.sTemp.Trim)
+			'====================================================
+		F.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.WashDown.End
+
+Program.Sub.NonWashDown.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.i.Declare(Long)
+V.Local.spart.Declare(String)
+V.Local.ssource.Declare(String)
+V.Local.snosource.Declare(String)
+V.Local.snosource2.Declare(String)
+v.Local.sTemp.Declare(String) 
+v.Local.sPart_Prefix.Declare
+
+'loop through the UDT
+F.Intrinsic.Control.for(V.Local.i,V.uGlobal.uXML.LBound,V.uGlobal.uXML.UBound,1)
+	f.Intrinsic.Control.If(v.uGlobal.uXML(v.Local.i)!Part_NO.Trim,<>,"")
+		'check to see if the source attribute is purchase					
+
+		F.Intrinsic.Control.If(V.uGlobal.uXML(v.Local.i)!Source,=,"Purchase","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"P")
+		
+			'-so if we have a designator ignore, else we add a -N to it cause it's Purchased 
+			Function.Intrinsic.Control.CallSub(finddesignator,"Part",v.uGlobal.uxml(v.Local.i)!Part_NO.Trim) 
+			Function.Intrinsic.Control.If(v.Args.sRet.Trim,=,"") 
+				'append -N 				
+				F.Intrinsic.String.Build("{0}-N",v.uGlobal.uXML(v.Local.i)!Part_NO.Trim,v.local.sTemp)
+				F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uGlobal.uxml(v.Local.i)!Part_NO.Trim,v.uGlobal.uXML!Parent,v.Local.sTemp.Trim)
+				v.uGlobal.uxml(v.Local.i)!Part_NO.set(v.Local.sTemp.Trim)
+				
+				f.Intrinsic.Control.If(v.uGlobal.uXML(v.Local.i)!Serial_Part_Number.Trim,<>,"")
+					F.Intrinsic.String.Build("{0}-N",v.uGlobal.uXML(v.Local.i)!Serial_Part_Number.Trim,v.Local.sTemp)	
+					v.uGlobal.uXML(v.Local.i)!Serial_Part_Number.Set(v.Local.sTemp)
+				f.Intrinsic.Control.EndIf
+				'============BP - 03/21/2022 ========================
+				
+				f.Intrinsic.String.Left(V.uGlobal.uXML(v.Local.i)!Part_NO,2,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+					F.Intrinsic.String.Build("{0}-M",V.uGlobal.uXML(v.Local.i)!Part_NO.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.String.Left(V.uGlobal.uXML(v.Local.i)!Part_NO,1,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+					F.Intrinsic.String.Build("{0}-M",V.uGlobal.uXML(v.Local.i)!Part_NO.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				V.uGlobal.uXML(v.Local.i)!Part_NO.Set(v.Local.sTemp.Trim)
+				'====================================================
+		
+			Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.ElseIf(V.uGlobal.uXML(v.Local.i)!Source,=,"Manufacture","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"M")
+			'if it's a manufacutred and we don't have a designator we will make it -m 
+			Function.Intrinsic.Control.CallSub(finddesignator,"Part",v.uGlobal.uXML(v.Local.I)!Part_NO.Trim) 
+			Function.Intrinsic.Control.If(v.Args.sRet.trim,=,"") 
+				'means don't have one, lets make it -M since we are manufact
+				f.Intrinsic.String.Build("{0}-M",v.uGlobal.uxml(v.Local.i)!Part_NO.Trim,v.Local.sTemp)
+				 F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uGlobal.uxml(v.Local.i)!Part_NO.Trim,v.uGlobal.uXML!Parent,v.Local.sTemp.Trim)
+				v.uGlobal.uxml(v.Local.i)!Part_NO.set(v.Local.sTemp.Trim)
+				f.Intrinsic.Control.If(v.uGlobal.uXML(v.Local.i)!Serial_Part_Number.Trim,<>,"")
+					F.Intrinsic.String.Build("{0}-M",v.uGlobal.uXML(v.Local.i)!Serial_Part_Number.Trim,v.Local.sTemp)	
+					v.uGlobal.uXML(v.Local.i)!Serial_Part_Number.Set(v.Local.sTemp)
+				f.Intrinsic.Control.EndIf
+				'============BP - 03/21/2022 ========================
+				
+				f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,2,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+					F.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,1,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+					F.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				v.uglobal.uXML(v.local.i)!Raw_Material.Set(v.Local.sTemp.Trim)
+				'====================================================
+			Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+	Function.Intrinsic.Control.EndIf
+	'got to do the same thing for Raw Material Node. 
+	F.Intrinsic.Control.if(v.uGlobal.uxml(v.Local.i)!Raw_Material.trim,<>,"")
+		F.Intrinsic.Control.If(V.uGlobal.uXML(v.Local.i)!Source,=,"Purchase","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"P")
+			'-so if we have a designator ignore, else we add a -N to it c ause it's Purchased 
+			Function.Intrinsic.Control.CallSub(finddesignator,"Part",v.uglobal.uXML(v.local.i)!Raw_Material.Trim) 
+			Function.Intrinsic.Control.If(v.Args.sRet.Trim,=,"") 
+				'append -N 				
+				F.Intrinsic.String.Build("{0}-N",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.local.sTemp)
+'				F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.uGlobal.uXML!Parent,v.Local.sTemp.Trim)
+				v.uglobal.uXML(v.local.i)!Raw_Material.set(v.Local.sTemp.Trim)
+				
+				'============BP - 03/21/2022 ========================
+				
+				f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,2,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+					F.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,1,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+					F.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				v.uglobal.uXML(v.local.i)!Raw_Material.Set(v.Local.sTemp.Trim)
+				'====================================================
+		
+			Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.ElseIf(V.uGlobal.uXML(v.Local.i)!Source,=,"Manufacture","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"M")
+			'if it's a manufacutred and we don't have a designator we will make it -m 
+			Function.Intrinsic.Control.CallSub(finddesignator,"Part",v.uglobal.uXML(v.local.i)!Raw_Material.Trim) 
+			Function.Intrinsic.Control.If(v.Args.sRet.trim,=,"") 
+				'means don't have one, lets make it -M since we are manufact
+				f.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp)				
+'				 F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.uGlobal.uXML!Parent,v.Local.sTemp.Trim)
+				v.uglobal.uXML(v.local.i)!Raw_Material.set(v.Local.sTemp.Trim)
+				
+				'============BP - 03/21/2022 ========================
+				f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,2,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+					F.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.String.Left(v.uglobal.uXML(v.local.i)!Raw_Material,1,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+					F.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				v.uglobal.uXML(v.local.i)!Raw_Material.Set(v.Local.sTemp.Trim)
+				'====================================================
+			Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+	Function.Intrinsic.Control.EndIf
+	
+
+		'got to do the same thing for Serial_Part_Number Node. 
+	F.Intrinsic.Control.if(v.uGlobal.uxml(v.Local.i)!Serial_Part_Number.trim,<>,"")
+		F.Intrinsic.Control.If(V.uGlobal.uXML(v.Local.i)!Source,=,"Purchase","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"P")
+			'-so if we have a designator ignore, else we add a -N to it c ause it's Purchased 
+			Function.Intrinsic.Control.CallSub(finddesignator,"Part",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim) 
+			Function.Intrinsic.Control.If(v.Args.sRet.Trim,=,"") 
+				'append -N 				
+				F.Intrinsic.String.Build("{0}-N",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.local.sTemp)
+'				F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.uGlobal.uXML!Parent,v.Local.sTemp.Trim)
+				v.uglobal.uXML(v.local.i)!Serial_Part_Number.set(v.Local.sTemp.Trim)
+				
+				'============BP - 03/21/2022 ========================
+				
+				f.Intrinsic.String.Left(v.uGlobal.uXML(v.Local.i)!Serial_Part_Number,2,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+					F.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.String.Left(v.uGlobal.uXML(v.Local.i)!Serial_Part_Number,1,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+					F.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				v.uglobal.uXML(v.local.i)!Serial_Part_Number.Set(v.Local.sTemp.Trim)
+				'====================================================
+		
+			Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.ElseIf(V.uGlobal.uXML(v.Local.i)!Source,=,"Manufacture","OR",V.uGlobal.uXML(v.Local.i)!Source,=,"M")
+			'if it's a manufacutred and we don't have a designator we will make it -m 
+			Function.Intrinsic.Control.CallSub(finddesignator,"Part",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim) 
+			Function.Intrinsic.Control.If(v.Args.sRet.trim,=,"") 
+				'means don't have one, lets make it -M since we are manufact
+				f.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp)				
+'				 F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uXML!Parent,v.uglobal.uXML(v.local.i)!Raw_Material.Trim,v.uGlobal.uXML!Parent,v.Local.sTemp.Trim)
+				v.uglobal.uXML(v.local.i)!Serial_Part_Number.set(v.Local.sTemp.Trim)
+				
+				'============BP - 03/21/2022 ========================
+				
+				f.Intrinsic.String.Left(v.uGlobal.uXML(v.Local.i)!Serial_Part_Number,2,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"00")
+					F.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.String.Left(v.uGlobal.uXML(v.Local.i)!Serial_Part_Number,1,v.Local.sPart_Prefix)
+				f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"W",or,v.Local.sPart_Prefix,=,"R")
+					F.Intrinsic.String.Build("{0}-M",v.uglobal.uXML(v.local.i)!Serial_Part_Number.Trim,v.Local.sTemp) 	
+				f.Intrinsic.Control.EndIf
+				v.uglobal.uXML(v.local.i)!Serial_Part_Number.Set(v.Local.sTemp.Trim)
+				'====================================================
+			Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+	Function.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.NonWashDown.End
+
+Program.Sub.RouterLogic.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.static.i.Declare(Long)
+V.Local.irtrubound.Declare(Long)
+V.Local.ssqlHeader.Declare(String)
+V.Local.ssqlLines.Declare(String)
+V.Local.srouter.Declare(String)
+'get all the workcenter names
+'copy the UDT
+
+F.Intrinsic.Variable.UDTCopy(V.uGlobal.uXML,V.uGlobal.uXMLCopy,False)
+F.Intrinsic.Variable.UDTMultiQuickSort(V.uGlobal.uXMLCopy!Source,False,V.uGlobal.uXMLCopy!Part_NO,False)
+'why not just get rid of the P sources.
+F.Intrinsic.Variable.UDTMultiFlag(V.uGlobal.uXMLCopy!Source,"P")
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uglobal.uXMLCopy)
+'loop through the uXML udt and begin processing the logic
+F.Intrinsic.Control.For(V.static.i,V.uGlobal.uXMLCopy.LBound,V.uGlobal.uXMLCopy.UBound,1)
+	'check to see if source is blank, if it is blank, and the parent part no nodde starts with A we are making it m. 
+	F.Intrinsic.Control.If(v.uGlobal.uXMLCopy(v.Static.i)!Source.Trim,=,"")
+		'does the parent node startt with a. 
+		Function.Intrinsic.Control.If(v.uGlobal.uXMLCopy(v.Static.i)!Parent.left1,=,"A")
+			v.uGlobal.uXMLCopy(v.Static.i)!Source.Set("M")
+		Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.EndIf
+	
+	'if source is equal to purchase, skip it as it will not be uploaded
+	F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.static.i)!Source,=,"P")
+		'if no time assembly flag the ordinal and move to the next record
+		F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uXMLCopy,True,V.static.i)
+		F.intrinsic.Control.Next(V.static.i)
+	'otherwise if it is manufacture
+	F.intrinsic.Control.ElseIf(V.uGlobal.uXMLCopy(v.static.i)!Source,=,"M")
+		'check to see if there is sheet metal data
+		F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.static.i)!Sheet_Metal_Thickness,=,"")
+			'check to see if timeweld has a value
+			F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.static.i)!TimeWeld,=,"")
+				'check to see if there is a value in timeassembly
+				F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.static.i)!Time_Assembly,=,"")
+					'check to see if special case to call 009
+					F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.Static.i)!Raw_Material,<>,"")
+						V.Global.iRouterCounter.Set(V.static.i)
+						F.Intrinsic.Control.CallSub(Gettemplate,"TemplateRTR","RTRTEMPLATE00009")
+					F.Intrinsic.Control.Else
+						'if no time assembly flag the ordinal and move to the next record
+						F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uXMLCopy,True,V.static.i)
+						F.intrinsic.Control.Next(V.static.i)
+					F.Intrinsic.Control.EndIf
+				'otherwise call the router008 upload
+				F.Intrinsic.Control.Else
+					V.Global.iRouterCounter.Set(V.static.i)
+					F.Intrinsic.Control.CallSub(Gettemplate,"TemplateRTR","RTRTEMPLATE00008")
+				F.Intrinsic.Control.EndIf
+			'if time weld is not blank call the R007 sub
+			F.Intrinsic.Control.Else
+				V.Global.iRouterCounter.Set(V.static.i)
+				F.Intrinsic.Control.CallSub(Gettemplate,"TemplateRTR","RTRTEMPLATE00007")
+			F.Intrinsic.Control.EndIf
+		'if there is no sheet metal data
+		F.Intrinsic.Control.Else
+			'check to see if it is a washdown or non wash down
+			F.Intrinsic.Control.If(V.Global.Wash,=,"Wash Down")
+				'check to see if bends, if none call the R006 sub
+				F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.Static.i)!Bends,=,"")
+					V.Global.iRouterCounter.Set(V.static.i)
+					F.Intrinsic.Control.CallSub(Gettemplate,"TemplateRtr","RTRTEMPLATE00006")
+				'otherwise check the timeweld value
+				F.Intrinsic.Control.Else
+					'if timeweld is blank call R005
+					F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.static.i)!TimeWeld,=,"")
+						V.Global.iRouterCounter.Set(V.static.i)
+						F.Intrinsic.Control.CallSub(Gettemplate,"TemplateRTR","RTRTEMPLATE00005")
+					'otherwise call R004
+					F.Intrinsic.Control.Else
+						V.Global.iRouterCounter.Set(V.static.i)
+						F.Intrinsic.Control.CallSub(Gettemplate,"TemplateRTR","RTRTEMPLATE00004")
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+			'otherwise if a non-wash down
+			F.Intrinsic.Control.Else
+				'check to see if bends, if none call the R003
+				F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.Static.i)!Bends,=,"")
+					V.Global.iRouterCounter.Set(V.static.i)
+					F.Intrinsic.Control.CallSub(Gettemplate,"TEmplateRTR","RTRTEMPLATE00003")
+				'if there are bends, check the value in timeweld
+				F.Intrinsic.Control.Else
+					'is there a value in timeweld?
+					F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.static.i)!TimeWeld,=,"")
+						'if no call R002
+						V.Global.iRouterCounter.Set(V.static.i)
+						F.Intrinsic.Control.CallSub(Gettemplate,"TemplateRtr","RTRTEMPLATE00002")
+					'otherwise call R001
+					F.Intrinsic.Control.Else
+						V.Global.iRouterCounter.Set(V.static.i)
+						F.Intrinsic.Control.CallSub(Gettemplate,"TemplateRTR","RTRTEMPLATE00001")
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.next(V.static.i)
+'delete the flagged from the copy UDT
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uXMLCopy)
+'Load the Router Review Screen.
+Function.Intrinsic.Control.CallSub(Loadrouterreview)
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.RouterLogic.End
+
+Program.Sub.GetTemplate.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.sSqlHeader.Declare(String)
+V.Local.sSqlLines.Declare(String)
+V.Local.sPartsql.Declare(String)
+V.Local.sq1through4sql.Declare(String)
+V.Local.sq5through8sql.Declare(String)
+V.Local.sq9through10sql.Declare(String)
+V.Local.sRouterchecksql.Declare(String)
+V.Local.fCutting.Declare(Float)
+V.Local.fSheetmentalcalc.Declare(Float)
+V.Local.sRet.Declare(String)
+v.Local.sConveyor.Declare
+
+'argument is going to be the template router number.
+'v.Args.TemplateRtr
+'this sub is called from RouterLogic.
+'check to see if that router exists. If it does nothing.
+
+F.Intrinsic.String.Build("Select ROUTER from V_ROUTER_HEADER where ROUTER = '{0}'",V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Serial_Part_Number,V.Local.srouterchecksql)
+F.ODBC.Connection!conx.openrecordsetro("rstRoutercheck",V.Local.srouterchecksql)
+F.Intrinsic.Control.If(V.ODBC.conx!rstroutercheck.EOF,=,False)
+	F.ODBC.conx!rstRouterCheck.close
+	F.Intrinsic.Control.exitsub
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstRoutercheck.Close
+
+'make sure this router hasn't already been previously added just not uploaded yet.
+F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uRtr!Number,V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Serial_Part_Number,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+	'exit sub this router has already been previously processed.
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+'get the sample router header info
+F.Intrinsic.String.Build("Select * from V_ROUTER_HEADER where ROUTER = '{0}'",V.Args.TemplateRtr,V.Local.ssqlHeader)
+F.ODBC.Connection!conx.openrecordsetro("rstHeader",V.Local.ssqlHeader)
+F.Intrinsic.Control.If(V.ODBC.conx!rstHeader.EOF,=,False)
+	'get the sample router lines info	
+	F.Intrinsic.String.Build("Select * from V_ROUTER_LINE where ROUTER = '{0}' Order By Line_ROUTER",V.Args.TemplateRtr,V.Local.ssqlLines)
+	F.ODBC.Connection!conx.openrecordsetro("rstLines",V.Local.ssqlLines)
+	F.Intrinsic.Control.DoUntil(V.ODBC.conX!rstlines.EOF,=,True)
+		'check the ubound to see if 1 needs to be added
+		F.Intrinsic.Control.If(V.uGlobal.uRtr.UBound,=,-1)
+		'do nothing, otherwise add 1
+			V.Global.Irtrubound.Set(0)
+			V.uGlobal.uRtr.Redim(0,0)
+		F.Intrinsic.Control.Else
+			'add 1 to the udt ubound
+			F.Intrinsic.Math.Add(V.uGlobal.uRtr.UBound,1,V.Global.iRtrubound)
+			'redim the urtr udt
+			V.uGlobal.uRtr.RedimPreserve(0,V.Global.Irtrubound)
+		F.Intrinsic.Control.EndIf
+		'QUERY FOR PART INFORMATION	
+		
+		F.Intrinsic.String.Build("Select LOCATION, PRODUCT_LINE, DESCRIPTION from V_INVENTORY_MSTR where PART = '{0}'",V.uglobal.uXMLCopy(v.global.iRouterCounter)!Serial_Part_Number,V.Local.spartsql)
+		F.ODBC.Connection!conx.openrecordsetro("rstPart",V.Local.sPartSQL)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstPart.EOF,=,False)
+			'PART DESCRIPTION
+			V.uGlobal.uRtr(v.Global.Irtrubound)!desc.Set(V.ODBC.conx!rstPart.FieldValTrim!DESCRIPTION)
+			'LOCATION
+			V.uGlobal.uRtr(v.global.Irtrubound)!Locn.Set(V.ODBC.conx!rstPart.FieldValTrim!LOCATION)
+			'PRODUCT LINE
+			V.uGlobal.uRtr(v.global.Irtrubound)!Prod_Line.Set(V.ODBC.conx!rstPart.FieldValTrim!PRODUCT_LINE)
+		Function.Intrinsic.Control.Else
+		'====BP - 03/08/2022======
+			'check if PART_NO begins with 00 -> don't upload Serial part number
+			
+			f.Intrinsic.String.Left(v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Part_NO,2,v.Local.sConveyor)
+			f.Intrinsic.Control.If(v.Local.sConveyor,<>,"00")		
+				'if Part Doesn't Exist Add Part to Batch then use the information from the XML.
+				f.Intrinsic.Control.CallSub(addparttobatch,"Source",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Source,"Part",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Serial_Part_Number,"Desc",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Description,"AltDesc",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Part_NO,"Vendor",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Vendor,"Memo_2",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!SP,"Weight",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!WEIGHT,"MFG_PART_W",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!MANUF_PART_NO_WASHDOWN,"MFG_PART_NW",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!MANUF_PART_NO_NON_WASHDOWN)
+			f.Intrinsic.Control.EndIf
+		'=========================
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstPart.Close
+		V.uglobal.uRtr(v.Global.Irtrubound)!NUMBER.Set(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Serial_Part_Number)
+		'DESCRIPTION header
+		V.uglobal.uRtr(v.Global.Irtrubound)!Desc.Set(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Description)
+		'only overwrite the description from template router if it exists.
+		F.Intrinsic.Control.If(V.ODBC.conx!rstLines.FieldValTrim!Desc_RT_LINE,<>,"")
+			'Description Sequence
+			V.uGlobal.urtr(v.Global.irtrubound)!Seq_Desc.Set(V.ODBC.conx!rstLines.FieldValTrim!Desc_RT_Line)
+		F.Intrinsic.Control.Else
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Seq_Desc.Set(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Description)
+		F.Intrinsic.Control.EndIf
+		'Source
+		V.uGlobal.uRTR(v.Global.iRtRUBound)!Source.Set(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Source)
+		'SEQUENCE
+		V.uGlobal.uRtr(V.Global.Irtrubound)!Sequence.Set(V.ODBC.conx!rstLines.FieldValTrim!LINE_ROUTER)
+		'QTY 1-10
+		F.Intrinsic.String.Build("Select Quantity_1, Quantity_2, Quantity_3, Quantity_4 from V_RTR_PRICE_1_4 where ROUTER = '{0}' and LINE_ROUTER = '{1}'",V.Args.TemplateRtr,V.ODBC.conx!rstLines.FieldValTrim!LINE_ROUTER,V.Local.sq1through4sql)
+		F.ODBC.Connection!conx.openrecordsetro("rstq14",V.Local.sq1through4sql)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstq14.EOF,=,False)
+			'QTY 1 - 4
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Qty1.Set(V.ODBC.conx!rstq14.FieldValFloat!Quantity_1)
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Qty2.Set(V.ODBC.conx!rstq14.FieldValFloat!Quantity_2)
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Qty3.Set(V.ODBC.conx!rstq14.FieldValFloat!Quantity_3)
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Qty4.Set(V.ODBC.conx!rstq14.FieldValFloat!Quantity_4)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstq14.Close
+		'QTY continued
+		F.Intrinsic.String.Build("Select Quantity_5, Quantity_6, Quantity_7, Quantity_8 from V_RTR_PRICE_5_8 where ROUTER = '{0}' and LINE_ROUTER = '{1}'",V.Args.TemplateRtr,V.ODBC.conx!rstLines.FieldValTrim!LINE_ROUTER,V.Local.sq5through8sql)
+		F.ODBC.Connection!conx.openrecordsetro("rstq58",V.Local.sq5through8sql)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstq58.EOF,=,False)
+			'QTY 5 - 8
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Qty5.Set(V.ODBC.conx!rstq58.FieldValFloat!Quantity_5)
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Qty6.Set(V.ODBC.conx!rstq58.FieldValFloat!Quantity_6)
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Qty7.Set(V.ODBC.conx!rstq58.FieldValFloat!Quantity_7)
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Qty8.Set(V.ODBC.conx!rstq58.FieldValFloat!Quantity_8)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstq58.Close
+		'QTY continued
+		F.Intrinsic.String.Build("Select Quantity_9, Quantity_10 from V_RTR_PRICE_9_10 where ROUTER = '{0}' and LINE_ROUTER = '{1}'",V.Args.TemplateRtr,V.ODBC.conx!rstLines.FieldValTrim!LINE_ROUTER,V.Local.sq9through10sql)
+		F.ODBC.Connection!conx.openrecordsetro("rstq910",V.Local.sq9through10sql)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstq910.EOF,=,False)
+			'QTY 9 - 10
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Qty9.Set(V.ODBC.conx!rstq910.FieldValFloat!Quantity_9)
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Qty10.Set(V.ODBC.conx!rstq910.FieldValFloat!Quantity_10)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstq910.Close
+		'LMO
+		V.uGlobal.uRtr(V.Global.Irtrubound)!LMO.Set(V.ODBC.conx!rstLines.FieldValTrim!LMO)
+		'have to do material a bit differently for routertemplate000009
+		'7 and 8 should hit because we don't have material sequence, but nine does
+		'and with 9 we pull from raw material node.
+		F.Intrinsic.Control.If(V.ODBC.conx!rstLines.FieldValTrim!LMO,=,"M")
+			'we've got to find the rm part based on a description. 
+			
+'F.Intrinsic.Debug.InvokeDebugger
+
+F.Intrinsic.Debug.Stop
+f.Intrinsic.Control.If(v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Serial_Part_Number,=,"10000088932-M")
+
+f.Intrinsic.Control.EndIf
+			f.Intrinsic.Control.CallSub(findpart,"Material",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Material,"Part",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Part_NO,"Router",v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Serial_Part_Number) 									
+			F.Intrinsic.Control.If(V.Args.TemplateRtr.Trim,=,"RTRTEMPLATE00009")
+				V.uGlobal.uRtr(V.Global.Irtrubound)!Part.Set(v.Args.RawMaterial)
+			F.Intrinsic.Control.Else
+				'PART - PART NUMBER NODE
+				'part number is going to be the Part NO node. 	
+				V.uGlobal.uRtr(V.Global.Irtrubound)!Part.Set(V.Args.RawMaterial)
+			F.Intrinsic.Control.EndIf			
+'			runtime quantity for the router material line will be coming from 
+			v.uGlobal.uRtr(v.Global.irtrubound)!RunTime.Set(v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!BB_Area) 
+			'description from inventory part. 
+			
+F.Intrinsic.Debug.Stop
+'			v.uGlobal.uRtr(v.uGlobal.iRtrUBound)!Seq_Desc.Set(v.Args.description)
+'ranjit
+			v.uGlobal.uRtr(v.Global.irtrubound)!Seq_Desc.Set(v.Args.description)
+		F.Intrinsic.Control.EndIf
+		'WORKCENTER - CHECK TO SEE IF LABOR STEP	
+		F.Intrinsic.Control.If(V.ODBC.conx!rstLines.FieldValTrim!LMO,=,"L")
+		'FREQUENCY
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Frequency.Set(V.ODBC.conx!rstLines.fieldvaltrim!FREQUENCY)
+			'OVERLAP
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Overlap.Set(V.ODBC.conx!rstLines.fieldvaltrim!OVERLAP)
+			'WORKCENTER
+			V.uGlobal.uRtr(v.Global.Irtrubound)!Workcenter.Set(V.ODBC.conx!rstLines.fieldvaltrim!PART_WC_OUTSIDE)
+			'MACHINE - Same as WC? yes......
+			'CHECK TO SEE WHAT KIND OF LABOR SEQUENCE IT IS	
+			'BUT THEY SEPERATE THEIR RUNTIME AND SETUP SEQUENCES. SO WE ONLY WANT TO CALCULATE A RUNTIME IS NOT ZERO?, CAUSE IT'S ZERO THATS THEIR SETUP SEQUENCE? ?\_(?)_/?
+'			F.Intrinsic.Control.If(v.ODBC.conx!rstLines.FieldVal!Run_Time,>,0)	
+				F.Intrinsic.Control.SelectCase(V.uGlobal.uRtr(v.Global.Irtrubound)!Workcenter.Trim)
+					'Laser
+					F.Intrinsic.Control.Case("LS01")
+						Function.Intrinsic.Control.CallSub(Laser)
+						'set setup value. cause it's either default or nada. 
+						v.uGlobal.uRtr(v.Global.Irtrubound)!Setup.set(v.ODBC.conx!rstLines.FieldVal!Set_Up)
+					'Deburr	
+					Function.Intrinsic.Control.Case("DBRR")
+						Function.Intrinsic.Control.CallSub(Deburr)	
+					Function.Intrinsic.Control.Case("TSR1")
+											'TIMESAVER
+						Function.Intrinsic.Control.CallSub(Timesaver)	
+					Function.Intrinsic.Control.Case("WL01")
+	'					WELDING STATION 1
+						Function.Intrinsic.Control.CallSub(Weldingstation1)	
+					Function.Intrinsic.Control.Case("PSH1")
+						'POLISHER
+						Function.Intrinsic.Control.CallSub(Polisher)	
+					Function.Intrinsic.Control.Case("AS01")
+						'ASSEMBLY					
+						Function.Intrinsic.Control.CallSub(Assembly)
+					Function.Intrinsic.Control.Case("INSP")			
+						'INSPECTION
+						Function.Intrinsic.Control.CallSub(inspection)
+						'TAKE WHATS IN OUR RUNTIME. BASED ON THEIR TEMPLATES THEIR INSP HAS A RUNTIME OF 1. 
+						V.uGlobal.uRtr(V.Global.Irtrubound)!RunTime.Set(v.ODBC.conx!rstLines.FieldVal!Run_Time)
+					Function.Intrinsic.Control.CaseElse
+						'otherwise use the runtime from the sample
+						v.uGlobal.uRtr(v.Global.Irtrubound)!Setup.Set(v.ODBC.conx!rstLines.FieldVal!Set_Up)
+						'RUNTIME						
+						V.uGlobal.uRtr(V.Global.Irtrubound)!RunTime.Set(V.ODBC.conx!rstLines.FieldValTrim!RUN_TIME)
+				Function.Intrinsic.Control.EndSelect
+'			F.Intrinsic.Control.Else 
+				'runtime will be zero. cause this is a setup line. they separate their runtime and setup lines. 
+'				V.uGlobal.uRtr(V.Global.Irtrubound)!RunTime.Set(0)
+				'have to check for 
+				'SETUP
+'				V.uGlobal.uRtr(V.Global.Irtrubound)!Setup.Set(V.ODBC.conx!rstLines.FieldValTrim!SET_UP)				
+'			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		'CUSTOMER -???
+		V.uGlobal.uRtr(V.Global.Irtrubound)!Customer.Set(V.ODBC.conx!rstHeader.FieldValTrim!CUSTOMER)
+		'ORIGINAL DATE
+		V.uGlobal.uRtr(V.Global.Irtrubound)!Orig_Date.Set(V.ODBC.conx!rstHeader.FieldValTrim!DATE_ORIGINAL)
+		
+		'OPERATION CODE/VENDOR
+		'===================BP - 03/21/022 ======================================
+'		v.Local.sPart_Prefix.Declare
+'		v.Local.iC.Declare
+'		
+'		f.Intrinsic.String.Left(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!PART_NO,1,v.Local.sPart_Prefix)
+'		f.Intrinsic.Control.If(v.Local.sPart_Prefix,=,"R")
+'			
+'			F.Intrinsic.String.RegExMatch(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Serial_Part_Number,"-[A-Z]$",True,v.Local.sRet) 
+'			
+'			Function.Intrinsic.Control.If(v.Local.sRet.Trim,<>,"")
+'				F.Intrinsic.String.Split(v.local.sRet,"*!*",v.Local.sRet)
+'				v.Local.iC.Set(v.Local.sret.UBound)
+'			Function.Intrinsic.Control.EndIf
+'			
+'			Function.Intrinsic.Control.If(v.Local.sRet(v.Local.iC).Trim,=,"-M")
+'				V.uGlobal.uRtr(V.Global.Irtrubound)!Operation.Set("RTW")
+'			Function.Intrinsic.Control.ElseIf(v.Local.sRet(v.Local.iC).Trim,=,"-S")
+'				V.uGlobal.uRtr(V.Global.Irtrubound)!Operation.Set("RTWS")
+'			Function.Intrinsic.Control.EndIf
+'			
+'		f.Intrinsic.Control.Else
+'			V.uGlobal.uRtr(V.Global.Irtrubound)!Operation.Set(V.ODBC.conx!rstLines.FieldValTrim!OPERATION)
+'		f.Intrinsic.Control.EndIf
+		'=========================================================================
+		
+		'RATE OR UNIT COST
+		F.Intrinsic.Control.If(V.ODBC.conx!rstLines.FieldValTrim!LMO,=,"M")
+			v.uGlobal.uRtr(v.Global.irtrubound)!Rate.Set(v.Args.MRate)
+		f.Intrinsic.Control.Else
+			V.uGlobal.uRtr(V.Global.Irtrubound)!Rate.Set(V.ODBC.conx!rstLines.FieldValTrim!RATE)
+		F.Intrinsic.Control.EndIf
+		'UNIT OF MEASURE
+		V.uGlobal.uRtr(V.Global.Irtrubound)!UM.Set(V.ODBC.conx!rstLines.FieldValTrim!UM_INVENTORY)
+		'EXTRA DESC 1-3
+		'PURGE FLAG
+		V.uGlobal.uRtr(V.Global.Irtrubound)!Purge.Set(V.ODBC.conx!rstHeader.FieldValTrim!PURGE_FLAG)
+		'MINIMUM FLAG
+		V.uGlobal.uRtr(V.Global.Irtrubound)!Min_Flag.Set(V.ODBC.conx!rstLines.FieldValTrim!FLAG_MINIMUM)
+		'MINIMUM OUTSIDE
+		'CREW SIZE
+		V.uGlobal.uRtr(V.Global.Irtrubound)!Crew.Set(V.ODBC.conx!rstLines.FieldValTrim!CREW_SIZE)
+		'LEAD TIME
+		V.uGlobal.uRtr(V.Global.Irtrubound)!Lead.Set(V.ODBC.conx!rstLines.FieldValTrim!LEAD_TIME)
+		'TOOLING FLAG
+		'SORT CODE
+		V.uGlobal.uRtr(V.Global.Irtrubound)!Sort.Set(V.ODBC.conx!rstLines.FieldValTrim!SORT_CODE)
+		'DRAWING NUMBER - ??
+		F.ODBC.conx!rstlines.MoveNext
+	Function.Intrinsic.Control.Loop
+F.Intrinsic.Control.EndIf
+
+'close the connections
+F.ODBC.conx!rstHeader.Close
+F.ODBC.conx!rstLines.Close
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.GetTemplate.End
+
+Program.Sub.Laser.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.fCutting.Declare(Float)
+V.Local.fSheetMetalCalc.Declare(Float)
+'Laser Runtime Calculations
+'Look at Sheet MEtal Thickness.
+'values are coming from table GCG_3701_FORMULA_VAL if they don't have it setup.... that's their fault.
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","Select Laser_Sheet_Metal,Laser_Value_1,Laser_Value_2,Laser_Value_3 From GCG_3701_Formula_Val")
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)
+	F.Intrinsic.UI.Msgbox("Custom Values to Use in Calculations have not been setup in Maintenance Program.","Can't Continue...")
+	F.ODBC.conx!rst.Close
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+f.Intrinsic.Control.If(v.ODBC.conx!rstLines.FieldVal!Run_Time,>,0)
+	'calculations for runtime
+	'check to see if sheet metal thickness is less than or equal to (Laser_Sheet_Metal
+	F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Sheet_Metal_Thickness,<=,V.ODBC.conx!rst.FieldValFloat!Laser_Sheet_Metal)
+		'cutting length-inner + cutting length-outer
+		F.Intrinsic.Math.Add(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!CL_Inner,V.uGlobal.uXMLCopy(v.global.iRouterCounter)!CL_Outer,V.Local.fcutting)
+		'(LASERVALUE1) * sheet metal thickness + LASER_VALUE_2)
+		F.Intrinsic.Math.Mult(v.ODBC.conx!rst.FieldVal!Laser_Value_1,V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Sheet_Metal_Thickness,V.Local.fsheetmetalcalc)
+		F.Intrinsic.Math.Add(V.Local.fsheetmetalcalc,v.ODBC.conx!rst.FieldVal!Laser_Value_2,V.Local.fsheetmetalcalc)
+		'divide fcutting by fsheetmetalcalc
+		F.Intrinsic.Math.Div(V.Local.fcutting,V.Local.fsheetmetalcalc,V.Local.fsheetmetalcalc)
+		'set it as the runtime
+		V.uGlobal.uRtr(V.Global.Irtrubound)!RunTime.Set(V.Local.fsheetmetalcalc)
+	'otherwise if greater than .5 add cutting length-inner and cutting length-outer than divide by 10
+	F.Intrinsic.Control.Else
+		'cutting length-inner + cutting length-outer
+		F.Intrinsic.Math.Add(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!CL_Inner,V.uGlobal.uXMLCopy(v.global.iRouterCounter)!CL_Outer,V.Local.fcutting)
+		'divide by (LASERVALUE3) 	
+		F.Intrinsic.Math.Div(V.Local.fcutting,V.ODBC.conx!rst.FieldVal!Laser_Value_3,V.Local.fcutting)
+		'set it as the runtime
+		V.uGlobal.uRtr(V.Global.Irtrubound)!RunTime.Set(V.Local.fcutting)
+	F.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.Laser.End
+
+Program.Sub.Deburr.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.fCutting.Declare(Float)
+'DEBURR
+'values are coming from table GCG_3701_FORMULA_VAL if they don't have it setup.... that's their fault.
+
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","Select Deburr_Bound_Box,Deburr_Sheet_Metal,Deburr_Value_1,Deburr_Value_2 From GCG_3701_Formula_Val")
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)
+	F.Intrinsic.UI.Msgbox("Custom Values to Use in Setup/Runtime Calculations have not been setup in Maintenance Program.","Can't Continue...")
+	F.ODBC.conx!rst.Close
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(v.ODBC.conx!rstLines.FieldVal!Run_Time,>,0)
+	'if holecount >0 then Holecount * debur_value_2 ,else look at bounding box area.
+	F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.global.iRouterCounter)!Hole_Count,<>,"")
+	
+		F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.global.iRouterCounter)!Hole_Count,<>,"",and,V.uGlobal.uXMLCopy(v.global.iRouterCounter)!Hole_Count,>,0)
+			F.Intrinsic.Math.Mult(V.uGlobal.uXMLCopy(v.global.iRouterCounter)!Hole_Count,V.ODBC.conx!rst.FieldVal!Deburr_Value_2,V.Local.fCutting)	
+		Function.Intrinsic.Control.EndIf
+		
+	f.Intrinsic.Control.ElseIf(V.uGlobal.uXMLCopy(v.global.iRouterCounter)!Hole_Count,=,"")
+		'Bounding Box Area if <=Deburr_Bound_Box Then use runtime on template
+			'If >15 then (Cutting Length Inner + Cutting Length OUter)/32
+			F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!BB_Area,<=,V.ODBC.conx!rst.FieldVal!Deburr_Bound_BOX)
+				'take from runtime on template
+				V.Local.fCutting.Set(V.ODBC.conx!rstLines.FieldValTrim!RUN_TIME)
+			Function.Intrinsic.Control.Else
+		'		(Cutting Length Inner + Cutting Length OUter)/debur value 1
+				F.Intrinsic.Math.Add(V.uGlobal.uxmlcopy(v.Global.iRouterCounter)!CL_Inner,V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!CL_Outer,V.Local.fCutting)
+				F.Intrinsic.Math.Div(V.Local.fCutting,V.ODBC.conx!rst.FieldValTrim!Deburr_Value_1,V.Local.fCutting)
+			Function.Intrinsic.Control.EndIf
+			'if SHEET METAL THICKNESS >= Deburr_Sheet_Metail
+			'take fCutting value from above and multiply by 2.
+			F.Intrinsic.Control.If(V.uGlobal.uXMLcopy(v.Global.iRouterCounter)!Sheet_Metal_Thickness,>=,V.ODBC.conx!rst.FieldVal!Deburr_Sheet_Metal)
+				F.Intrinsic.Math.Mult(V.Local.fCutting,2,V.Local.fCutting)
+			Function.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	'set Runtime from fCutting value
+	V.uGlobal.uRtr(V.Global.Irtrubound)!RunTime.Set(V.Local.fCutting)
+Function.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("Deburr_Err")
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.Deburr.End
+
+Program.Sub.TimeSaver.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.fCalc.Declare(Float)
+'Timesaver Sequence .
+'values are coming from table GCG_3701_FORMULA_VAL if they don't have it setup.... that's their fault.
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","Select TimeSave_Runtime,TimeSave_Value1 From GCG_3701_Formula_Val")
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)
+	F.Intrinsic.UI.Msgbox("Custom Values to Use in Calculations have not been setup in Maintenance Program.","Can't Continue...")
+	F.ODBC.conx!rst.Close
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+f.Intrinsic.Control.If(v.ODBC.conx!rstLines.FieldValRTrim!Run_time,>,0)
+	'if washdown and bounding box width <=30 then timesave_runtime
+	Function.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.global.iRouterCounter)!BB_Width,<=,30)
+		V.uGlobal.uRtr(V.Global.Irtrubound)!RunTime.Set(V.ODBC.conx!rst.FieldVal!TimeSave_Runtime)				
+	Function.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.EndIf
+'only if the setup line has a value, else it's possibly not the setup line. 
+Function.Intrinsic.Control.If(v.ODBC.conx!rstLines.FieldVal!Set_Up,>,0)
+	Function.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.global.iRouterCounter)!Bends,>,0)
+		'we don't know what BENDS runtime equates too>
+		'take value in bends runtime and add Bends * TimeSave_Value1. new bend setup
+		F.Intrinsic.Math.Mult(v.ODBC.conx!rst.FieldVal!TimeSave_Value1,v.uGlobal.uXMLCopy(v.Global.iiRouterCounter)!Bends,v.Local.fCalc)
+		F.Intrinsic.Math.Add(v.Local.fCalc,v.ODBC.conx!rst.FieldVal!TimeSave_Runtime,v.Local.fCalc)
+		'add existing runtime to whatever is in fCalc
+		'???
+		'new bend setup 
+		'but we have to add back the runtime to this setup too. so we have some magic going on. 
+		v.uGlobal.uRtr(v.Global.iIrtrubound)!Setup.Set(v.Local.fCalc) 
+	Function.Intrinsic.Control.EndIf	
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.TimeSaver.End
+
+Program.Sub.WeldingStation1.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.fVal.Declare(Float)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","Select Weld_Value1 From GCG_3701_Formula_Val")
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)
+	F.Intrinsic.UI.Msgbox("Custom Values to Use in Calculations have not been setup in Maintenance Program.","Can't Continue...")
+	F.ODBC.conx!rst.Close
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.uGlobal.uXMLCopy(v.global.iRouterCounter)!TimeWeld,>,0)
+	'then value on setup and value on runtime
+	'problem is they have setup and runtime on different sequences so it fudges things up.
+	F.Intrinsic.Control.If(v.ODBC.conx!rstLines.FieldVal!Run_Time,<=,0)
+		V.uGlobal.uRtr(v.Global.Irtrubound)!Setup.Set(V.ODBC.conx!rst.FieldVal!WELD_VALUE1)
+	Function.Intrinsic.Control.Else 
+		V.uGlobal.uRtr(v.Global.Irtrubound)!Runtime.Set(V.ODBC.conx!rst.FieldVal!WELD_VALUE1)
+	Function.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.WeldingStation1.End
+
+Program.Sub.Polisher.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.fVal.Declare(Float)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","Select Polish_Value1,Polish_Value2 From GCG_3701_Formula_Val")
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)
+	F.Intrinsic.UI.Msgbox("Custom Values to Use in Calculations have not been setup in Maintenance Program.","Can't Continue...")
+	F.ODBC.conx!rst.Close
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+'If Washdown Then Timeweld / Polish_Value1
+'If nonwashdown then Timeweld/Polish Value 2
+Function.Intrinsic.Control.If(v.ODBC.conx!rstLines.FieldVal!Run_Time,>,0) 
+	F.Intrinsic.Control.If(V.Global.Wash,=,"Wash Down")
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.FieldVal!Polish_Value1,>,0,"AND",V.uGlobal.uXMLCopy(v.global.iRouterCounter)!TimeWeld.Trim,<>,"")
+			F.Intrinsic.Math.Div(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!TimeWeld,V.ODBC.conx!rst.fieldval!Polish_Value1,V.Local.fVal)
+		Function.Intrinsic.Control.Else
+			V.Local.fVal.Set(0)
+		Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.Else
+		'means no wash down divide by value 2
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.FieldVal!Polish_Value2,>,0,"AND",V.uGlobal.uXMLCopy(v.global.iRouterCounter)!TimeWeld.Trim,<>,"")
+			F.Intrinsic.Math.Div(V.uGlobal.uXMLCopy(v.Global.iRouterCounter)!TimeWeld,V.ODBC.conx!rst.fieldval!Polish_Value2,V.Local.fVal)
+		Function.Intrinsic.Control.Else
+			V.Local.fVal.Set(0)
+		Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.EndIf
+	V.uGlobal.uRtr(v.Global.Irtrubound)!Runtime.Set(V.Local.fVal)
+Function.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.Polisher.End
+
+Program.Sub.Assembly.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.fVal.Declare(Float)
+'if Time Assembly is > 0 then use time assembly value for runtime. else we use?
+f.Intrinsic.Control.If(v.ODBC.conx!rstLines.FieldVal!Run_Time,>,0) 
+	Function.Intrinsic.Control.If(V.uGlobal.uxmlcopy(v.Global.iRouterCounter)!Time_Assembly,>,0)
+		V.uGlobal.uRtr(v.Global.iIrtrubound)!RUntime.Set(V.uGlobal.uxmlcopy(v.Global.iRouterCounter)!Time_Assembly)
+	Function.Intrinsic.Control.EndIf	
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.Assembly.End
+
+Program.Sub.Inspection.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","Select Inspec_Setup From GCG_3701_Formula_Val")
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)
+	F.Intrinsic.UI.Msgbox("Custom Values to Use in Calculations have not been setup in Maintenance Program.","Can't Continue...")
+	F.ODBC.conx!rst.Close
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+'InspecSetup is going to be setup
+V.uGlobal.uRtr(v.Global.Irtrubound)!Setup.Set(V.ODBC.conx!rst.FieldVal!Inspec_Setup)
+F.ODBC.conx!rst.Close
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.Inspection.End
+
+Program.Sub.cmdSaveChanges_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.iRow.Declare(Long)
+v.Local.sRet.Declare(String)
+v.Local.sRow.Declare(string)
+v.Local.iRows.Declare(Long)
+V.Local.sHold.Declare(String)
+v.Local.sLMO.Declare(String)
+Function.Intrinsic.Control.BlockEvents
+'update each router line
+
+gui.F_Router_Review.gsfgLines.Commit
+v.Local.iRows.Set(V.Screen.F_Router_Review!gsfgLines.Rows)
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+F.Intrinsic.Control.For(V.Local.iRow,1,V.Local.iRows,1)
+	Gui.F_Router_Review.gsfgLines.ReadRow(v.Local.iRow,v.Local.sRow)
+	F.Intrinsic.String.Split(v.Local.sRow,"*!*",v.Local.sRow)
+	F.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uRtr!Number,v.Local.sRow(0).Trim,v.uGlobal.uRtr!Sequence,v.Local.sRow(1).Trim,v.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		v.uGlobal.uRtr(v.Local.sRet(0))!Setup.Set(v.Local.sRow(4))
+		'Setup
+		F.Intrinsic.String.Format(V.uGlobal.uRTR(v.Local.sRet(0))!Setup.trim,"0.0000",V.Local.shold)
+		F.Intrinsic.String.LPad(V.Local.shold," ",16,V.Local.shold)
+		F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+		V.uGlobal.uRTR(v.Local.sRet(0))!Setup.set(V.local.shold)
+		v.uGlobal.uRtr(v.Local.sRet(0))!Runtime.Set(v.Local.sRow(5))
+			'Runtime/Material
+		F.Intrinsic.Control.If(V.uGlobal.uRTR(v.Local.sRet(0))!RunTime,<>," ")
+			F.Intrinsic.String.Format(V.uGlobal.uRTR(v.Local.sRet(0))!RunTime,"0.0000",V.uGlobal.uRTR(v.Local.sRet(0))!RunTime)
+			F.Intrinsic.String.LPad(V.uGlobal.uRTR(v.Local.sRet(0))!RunTime,"0",16,V.uGlobal.uRTR(v.Local.sRet(0))!RunTime)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.LPad("0","0",16,V.uGlobal.uRTR(v.Local.sRet(0))!RunTime)
+		F.Intrinsic.Control.EndIf
+		v.Local.sLMO.Set(v.uGlobal.uRtr(v.Local.sRet(0))!LMO)
+		F.Intrinsic.Control.If(V.Local.sLMO,=,"M")
+			F.Intrinsic.String.Left(V.uGlobal.uRTR(v.Local.sRet(0))!RunTime,16,V.Local.shold)
+	'		V.uGlobal.uRTR(v.Global.iLineRTR)!Qty1.set(V.Local.shold)
+			V.uGlobal.uRtr(v.Local.sRet(0))!RunTime.Set(V.Local.shold)
+		F.Intrinsic.Control.Else
+	'		F.Intrinsic.String.LPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Qty1,"0",16,V.uGlobal.uRTR(v.Global.iLineRTR)!Qty1)
+			F.Intrinsic.String.LPad(V.uGlobal.uRtr(v.Local.sRet(0))!RunTime,"0",16,V.uGlobal.uRtr(v.Local.sRet(0))!RunTime)
+		F.Intrinsic.Control.EndIf
+		
+		
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iRow)
+
+Function.Intrinsic.Control.UnBlockEvents
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSaveChanges_Click.End
+
+Program.Sub.cmdUpload_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+Function.Intrinsic.Control.BlockEvents
+Gui.f_Router_Review..Visible(False)
+F.Intrinsic.UI.InvokeWaitDialog("Preparing Router for Upload...","Wait...")
+'do we have inventory parts to upload.
+Function.Intrinsic.Control.If(V.Global.bPartBatch,=,True)
+	f.Global.Inventory.PostPartBatch
+	'set it to false for the BOM upload then.
+	V.Global.bPartBatch.Set(False)
+Function.Intrinsic.Control.EndIf
+'this rereads the grid and saves the changes made to the udt.
+F.Intrinsic.Control.CallSub(Cmdsavechanges_click)
+
+F.Intrinsic.Debug.Stop
+
+F.Intrinsic.Control.CallSub(Routerline)
+F.Intrinsic.UI.Sleep(2)
+Function.Intrinsic.Control.UnBlockEvents
+'Then Clal the BOM UPload.
+Function.Intrinsic.Control.CallSub(Bom_upl)
+'F.Intrinsic.Control.CallSub(Routerclear)
+F.Intrinsic.UI.CloseWaitDialog
+Function.Intrinsic.Control.UnBlockEvents
+Gui.F_Router_Review..Visible(False)
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdUpload_Click.End
+
+Program.Sub.F_Router_Review_UnLoad.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+'continue to bom w/o uploading router? 
+F.Intrinsic.UI.Msgbox("Would you like to continue to the BOM?","Continue to BOM?",4,v.Local.sError) 
+F.Intrinsic.Control.if(V.Local.sError,=,"6")
+	'MEANs they want to continue to BOM portion. 
+	'Then Clal the BOM UPload.
+	Function.Intrinsic.Control.BlockEvents
+	Gui.F_Router_Review..Visible(False)
+	F.Intrinsic.UI.CloseWaitDialog
+	Function.Intrinsic.Control.CallSub(Bom_upl)
+	'F.Intrinsic.Control.CallSub(Routerclear)
+f.Intrinsic.Control.Else 
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.F_Router_Review_UnLoad.End
+
+Program.Sub.LoadRouterReview.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.iC.Declare(Long)
+V.Local.iRows.Declare(Long)
+V.Local.iRow.Declare(Long)
+V.Local.fTemp.Declare(Float)
+V.Local.sTemp.Declare(String)
+v.Local.iStyle.Declare(Long,2)
+'see if anything in global error. if so we going to spit out a text file and then end. 
+
+F.Intrinsic.Control.If(v.Global.sError.Trim,<>,"") 
+	Function.Intrinsic.Control.CallSub(WriteErrorLog)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(Routeraddrecord)
+F.Intrinsic.Variable.UDTMultiFlagDuplicates(v.uGlobal.uRtr!number,v.uGlobal.uRtr!sequence) 
+F.Intrinsic.Variable.UDTDeleteFlagged(v.uGlobal.uRtr)
+'delete 
+F.Intrinsic.Variable.UDTMultiQuickSort(V.uGlobal.uRTR!Number,False,V.uGlobal.uRtr!Sequence,False)
+Gui.F_Router_Review.gsfgLines.Rows(1)
+V.Local.iRows.set(V.Screen.F_Router_Review!gsfgLines.Rows)
+'**Disclaimer
+'Can't Use Load UDT from Router since depending on the sequence type we have to pull from different fields.
+'**Disclaimer
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uRtr.UBound,1)
+	F.Intrinsic.Control.If(V.uGlobal.uRtr(v.Local.iC)!Sequence.Trim,<>,"000000")
+		F.Intrinsic.Math.Add(V.Local.iRows,1,V.Local.iRows)
+		Gui.F_Router_Review.gsfgLines.rows(V.Local.iRows)
+		F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRow)
+		Gui.F_Router_Review.gsfgLines.TextMatrix(0,V.Local.iRow,V.uGlobal.urtr(v.Local.ic)!number.Trim)
+		Gui.F_Router_Review.gsfgLines.TextMatrix(1,V.Local.iRow,V.uGlobal.uRtr(v.Local.iC)!Sequence.Trim)
+		Gui.F_Router_Review.gsfgLines.TextMatrix(2,V.Local.iRow,V.uGlobal.uRtr(v.Local.iC)!lmo.Trim)
+		Function.Intrinsic.Control.If(V.uGlobal.uRtr(v.Local.iC)!lmo,=,"M")
+			Gui.F_Router_Review.gsfgLines.TextMatrix(3,V.Local.iRow,V.uGlobal.uRtr(v.Local.iC)!Part.Trim)
+			'was part in inventory
+			F.Intrinsic.variable.UDTMultiSeek(v.uGlobal.uINV1!Part,v.uGlobal.uRtr(v.Local.iC)!part.Trim,v.Local.sTemp)
+			f.Intrinsic.Control.If(v.Local.sTemp.Trim,<>,"") 
+				'means it was. 
+				v.Local.iStyle.Set(3)				
+			Function.Intrinsic.Control.EndIf
+		Function.Intrinsic.Control.ElseIf(V.uGlobal.uRtr(v.Local.iC)!lmo,=,"L")
+			Gui.F_Router_Review.gsfgLines.TextMatrix(3,V.Local.iRow,V.uGlobal.uRtr(v.Local.iC)!Workcenter.Trim)
+		Function.Intrinsic.Control.EndIf
+		Function.Intrinsic.Control.If(V.uGlobal.uRtr(v.Local.iC)!setup.Trim,=,"")
+			V.Local.sTemp.Set(0.0000)
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Local.iC)!setup,"0.0000",V.Local.sTemp)
+		Function.Intrinsic.Control.EndIf
+		Gui.F_Router_Review.gsfgLines.TextMatrix(4,V.Local.iRow,V.Local.sTemp)
+		Function.Intrinsic.Control.If(V.uGlobal.uRtr(v.Local.iC)!Runtime.Trim,=,"")
+			V.Local.sTemp.Set(0.0000)
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Local.iC)!Runtime,"0.0000",V.Local.sTemp)
+		Function.Intrinsic.Control.EndIf
+		Gui.F_Router_Review.gsfgLines.TextMatrix(5,V.Local.iRow,V.Local.stemp)		
+		Gui.F_Router_Review.gsfgLines.ApplyStyle(V.Local.iRow,v.Local.iStyle)
+		v.Local.iStyle.Set(2)
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+Gui.F_Router_Review.gsfgLines.FixedRows(1)
+'only show this if we have something in the router to upload. else skip to BOM
+F.Intrinsic.Control.If(V.uGlobal.uRtr.UBound,>,0)
+	f.Intrinsic.UI.CloseWaitDialog
+	Gui.F_Router_Review..Show
+	'This will wit for the user until the screen is no longer being shown.
+	'The	y will click thr upload router button.
+	gui.F_Router_Review..WaitForDismiss
+F.Intrinsic.Control.Else
+	'load BOM Upld.
+	F.Intrinsic.Control.CallSub(Bom_upl)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.LoadRouterReview.End
+
+Program.Sub.BuildStyle.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.iC.Declare(Long)
+V.Local.sScreen.Declare(String)
+V.Local.iCount.Declare(String)
+V.Local.iStyle.Declare(Long)
+V.Local.iAlignment.Declare(Long)
+Gui.F_Router_Review.gsfgLines.Rows(1)
+Gui.F_Router_Review.gsfgLines.Rows(2)
+Gui.F_Router_Review.gsfgLines.Cols(6)
+Gui.F_Router_Review.gsfgLines.FixedRows(1)
+Gui.F_Router_Review.gsfgLines.TextMatrix(0,0,"Router")
+Gui.F_Router_Review.gsfgLines.TextMatrix(1,0,"Seq")
+Gui.F_Router_Review.gsfgLines.TextMatrix(2,0,"LMO")
+Gui.F_Router_Review.gsfgLines.TextMatrix(3,0,"Part/WC")
+Gui.F_Router_Review.gsfgLines.TextMatrix(4,0,"Setup")
+Gui.F_Router_Review.gsfgLines.TextMatrix(5,0,"Runtime")
+Gui.F_Router_Review.gsfgLines.SetColumnPercentages(".25:.1:.1:.25:.15:.15")
+F.Intrinsic.Control.For(V.Local.iC,0,5,1)
+	Gui.F_Router_Review.gsfgLines.BuildStyle(1,V.Local.iC,"Fontstyle","Bold",True)
+	Gui.F_Router_Review.gsfgLines.BuildStyle(1,V.local.ic,"Format","Alignment",4)
+	Gui.F_Router_Review.gsfgLines.BuildStyle(2,V.local.ic,"Format","Alignment",2)
+	Function.Intrinsic.Control.If(V.Local.iC,<,4)
+		Gui.F_Router_Review.gsfgLines.BuildStyle(2,V.local.ic,"Type","Locked",True)		
+		Gui.F_Router_Review.gsfgLines.BuildStyle(3,V.local.ic,"Type","Locked",True)	
+	Function.Intrinsic.Control.Else
+		Gui.F_Router_Review.gsfgLines.BuildStyle(2,V.local.ic,"Format","Mask","0.0000")
+		Gui.F_Router_Review.gsfgLines.BuildStyle(3,V.local.ic,"Format","Mask","0.0000")
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+Gui.F_Router_Review.gsfgLines.BuildStyle(3,3,"Color","Back",v.Color.Yellow)
+Gui.F_Router_Review.gsfgLines.ApplyStyle(0,1)
+V.Local.sScreen.Set("FormBOM")
+'BOM Buildstyle
+Gui.[v.Local.sScreen].gsflexgrid2.Rows(2)
+Gui.[v.Local.sScreen].gsflexgrid2.Cols(8)
+Gui.[v.Local.sScreen].gsflexgrid2.FixedRows(1)
+'3 Buildstyles: Title, Default, Non-inventory Part
+'Style 1: Title
+V.Local.iStyle.Set(1)
+F.Intrinsic.Control.For(V.Local.iCount,0,7,1)
+	F.Intrinsic.Control.For(V.Local.iStyle,1,4,1)
+		Gui.[v.Local.sScreen].gsflexgrid2.BuildStyle(V.Local.iStyle,V.Local.iCount,"Type","Locked",True)
+		F.Intrinsic.Control.SelectCase(V.Local.iCount)
+			F.Intrinsic.Control.Case(0)
+				V.Local.iAlignment.Set(4)
+			F.Intrinsic.Control.Case(7)
+				V.Local.iAlignment.Set(4)
+				Gui.[v.Local.sScreen].gsflexgrid2.BuildStyle(V.Local.iStyle,V.Local.iCount,"Format","Mask","#0.0000")
+			F.Intrinsic.Control.CaseElse
+				V.Local.iAlignment.Set(2)
+		F.Intrinsic.Control.EndSelect
+		Gui.[v.Local.sScreen].gsflexgrid2.BuildStyle(V.Local.iStyle,V.Local.iCount,"Format","Alignment",V.Local.iAlignment)
+		'Style Color
+		F.Intrinsic.Control.SelectCase(V.Local.iStyle)
+			F.Intrinsic.Control.Case(1)
+				Gui.[v.Local.sScreen].gsflexgrid2.BuildStyle(V.Local.iStyle,V.Local.iCount,"Color","BACK",V.Color.SEC-GSS-12)
+			F.Intrinsic.Control.Case(2)
+				Gui.[v.Local.sScreen].gsflexgrid2.BuildStyle(V.Local.iStyle,V.Local.iCount,"Color","Back",Variable.Color.White)
+			F.Intrinsic.Control.Case(3)
+				F.Intrinsic.Control.If(v.Local.iCount,=,1)
+					Gui.[v.Local.sScreen].gsflexgrid2.BuildStyle(V.Local.iStyle,V.Local.iCount,"Color","Back",Variable.Color.Yellow)
+				Function.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Case(4)
+				Gui.[v.Local.sScreen].gsflexgrid2.BuildStyle(V.Local.iStyle,V.Local.iCount,"Color","Back",Variable.Color.LtRed)
+		F.Intrinsic.Control.EndSelect
+	F.Intrinsic.Control.Next(V.Local.iStyle)
+F.Intrinsic.Control.Next(V.Local.iCount)
+
+'Title Row
+Gui.[v.Local.sScreen].gsflexgrid2.TextMatrix(0,0,"Level")
+Gui.[v.Local.sScreen].gsflexgrid2.TextMatrix(1,0,"Part Number/Rev")
+Gui.[v.Local.sScreen].gsflexgrid2.TextMatrix(2,0,"Description")
+Gui.[v.Local.sScreen].gsflexgrid2.TextMatrix(3,0,"UM")
+Gui.[v.Local.sScreen].gsflexgrid2.TextMatrix(4,0,"Cat")
+Gui.[v.Local.sScreen].gsflexgrid2.TextMatrix(5,0,"Sc")
+Gui.[v.Local.sScreen].gsflexgrid2.TextMatrix(6,0,"Parent")
+Gui.[v.Local.sScreen].gsflexgrid2.TextMatrix(7,0,"Quantity")
+
+Gui.[v.Local.sScreen].gsflexgrid2.SetColumnPercentages(".1:.2:.23:.05:.05:.05:.2:.12")
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.BuildStyle.End
+
+Program.Sub.cmdUploadBOM_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.sFile.Declare(String)
+v.Local.sParent.Declare(String) 
+V.Local.bEx.Declare(Boolean)
+v.Local.sCount.Declare(String) 
+v.Local.sLine.Declare(String)  
+v.Local.sSeq.Declare(String) 
+v.Local.iUB.Declare(Long) 
+v.Local.sRev.Declare(String)
+v.Local.sRet.Declare(String) 
+v.Local.sSQL.Declare(String)
+v.Local.sDesc.Declare(String)
+
+gui.FormBOM..Visible(False)
+F.Intrinsic.UI.InvokeWaitDialog("Uploading BOM....")
+v.Global.sError.Set("")
+F.Intrinsic.Variable.UDTMultiQuickSort(v.uGlobal.uBOM!Parent,False)
+
+'first check to make sure that everything we need, parent, part, and source are filled out. if not don't let them upload. 
+F.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uBOM!Parent,"",v.Local.sRet) 
+F.Intrinsic.Control.If(v.Local.sRet.Trim,<>,"") 
+	F.Intrinsic.Control.CallSub(ErrorLog,"Header","Parent Data Missing...","Mess","Upload could not be processed. Lines are missing parent information.") 
+'	Function.Intrinsic.Control.ExitSub 
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.ubom!Part,"",v.Local.sRet)
+Function.Intrinsic.Control.If(v.Local.sRet.Trim,<>,"") 
+	F.Intrinsic.Control.CallSub(ErrorLog,"Header","Child Data Missing...","Mess","Upload could not be processed. Lines are missing part(child) information.") 
+'	Function.Intrinsic.Control.ExitSub 
+Function.Intrinsic.Control.EndIf
+
+f.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uBOM!Source,"",v.Local.sret)
+Function.Intrinsic.Control.If(v.Local.sret.Trim,<>,"") 
+	F.Intrinsic.Control.CallSub(ErrorLog,"Header","Source Data Missing...","Mess","Upload could not be processed. Lines are missing Source code information.") 
+'	Function.Intrinsic.Control.ExitSub 
+Function.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.If(v.Global.sError.Trim,<>,"") 
+	f.Intrinsic.Control.CallSub(writeerrorlog,"BOM","True") 
+	gui.FormBOM..Visible(True) 
+	f.Intrinsic.UI.CloseWaitDialog
+	Function.Intrinsic.Control.ExitSub 	
+Function.Intrinsic.Control.EndIf
+'Delete any occurences where we have multiple of the same Parent and Part combination. Only need them once. 
+F.Intrinsic.Variable.UDTMultiFlagDuplicates(v.uGlobal.uBOM!Parent,v.uGlobal.uBOM!Part) 
+f.Intrinsic.Variable.UDTDeleteFlagged(v.uGlobal.uBOM)
+'have to loop through UDT and build our string. 
+
+
+
+F.Intrinsic.Control.For(v.Local.iUB,0,v.uGlobal.uBOM.UBound,1) 	
+	'Parent. 
+'	Function.Intrinsic.Control.CallSub(addparttobatch,"Source",v.uglobal.uBOM(v.local.iUB)!Source,"Part",v.uGlobal.uBOM(v.Local.iUB)!Parent,"Desc",v.uglobal.uBOM(v.local.iUB)!Description,"AltDesc",v.uglobal.uBOM(v.local.iUB)!Part_NO) 	
+'	
+'	'Part
+'	Function.Intrinsic.Control.CallSub(addparttobatch,"Source",v.uglobal.uBOM(v.local.iUB)!Source,"Part",v.uGlobal.uBOM(v.Local.iUB)!Part,"Desc",v.uglobal.uBOM(v.local.iUB)!Description,"AltDesc",v.uglobal.uBOM(v.local.iUB)!Part_NO) 	
+	
+	'Parent	
+	F.Intrinsic.String.RPad(v.uGlobal.uBOM(V.local.iUB)!Parent," ",20,v.uGlobal.uBOM(V.local.iUB)!Parent)
+	'Seq
+	F.Intrinsic.String.LPad(v.uGlobal.uBOM(V.local.iUB)!Seq,"0",4,v.uGlobal.uBOM(V.local.iUB)!Seq)
+	'Qty
+	F.Intrinsic.String.LPad(v.uGlobal.uBOM(V.local.iUB)!Quantity,"0",4,V.Local.sCount)
+	F.Intrinsic.String.LPad(v.uGlobal.uBOM(v.Local.iUB)!Quantity,"0",16,V.Local.sCount)
+	'Part
+	F.Intrinsic.String.RPad(v.uGlobal.uBOM(V.local.iUB)!Part," ",20,v.uGlobal.uBOM(V.local.iUB)!Part)
+	'UM
+	F.Intrinsic.String.RPad(v.uGlobal.uBOM(V.local.iUB)!UM," ",2,v.uGlobal.uBOM(V.local.iUB)!UM)
+	'Desc
+	F.Intrinsic.String.Left(v.uGlobal.uBOM(V.local.iUB)!DESC,30,v.uGlobal.uBOM(V.local.iUB)!Desc)
+	F.Intrinsic.String.RPad(v.uGlobal.uBOM(V.local.iUB)!Desc," ",30,v.uGlobal.uBOM(V.local.iUB)!DESC)
+	'Rev
+	F.Intrinsic.String.Right(v.uGlobal.uBOM!Part,3,v.Local.sRev)
+	'Category
+	F.Intrinsic.String.RPad(v.uGlobal.uBOM(V.local.iUB)!Category," ",1,v.uGlobal.uBOM(V.local.iUB)!Category)
+	'Source
+	F.Intrinsic.String.RPad(v.uGlobal.uBOM(V.local.iUB)!Source," ",1,v.uGlobal.uBOM(V.local.iUB)!Source)
+	
+	'make sure this parent,part combo doesn't already exist. 
+	F.Intrinsic.String.Build("Select * From BOM_MSTR WHERE Parent = '{0}' And Part = '{1}'",v.uGlobal.uBOM(v.Local.iUB)!Parent,v.uGlobal.ubom(v.Local.iUB)!Part,v.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",v.Local.sSQL) 
+	Function.Intrinsic.Control.If(v.ODBC.conx!rst.EOF,=,True)
+		'sequence. 	
+		Function.Intrinsic.Control.If(v.uGlobal.uBOM(v.Local.iUB)!Parent,<>,v.Local.sParent) 
+			'means we got to add in an additional line for seq 0 value. 
+			'rev needs to be from parent. 
+			F.Intrinsic.String.Right(v.uGlobal.ubom(V.Local.iUB)!parent,3,v.Local.sRev)
+			F.Intrinsic.String.Left(v.Screen.FormBOM!txtDescription.text,30,v.Local.sDesc)
+			F.Intrinsic.String.RPad(v.Local.sDesc," ",30,v.Local.sDesc)
+			F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}{6}{7}{8}",V.uGlobal.uBOm(v.Local.iub)!Parent,"0000","0000000000000001",V.uGlobal.uBOm(v.Local.iub)!Parent,"EA",v.Local.sDesc,V.Local.sRev,V.uGlobal.uBOm(0)!Category,V.uGlobal.uBOm(0)!Source,V.Local.sLine)
+			F.Intrinsic.String.Build("{0}{1}{2}",V.global.sBom,V.Local.sLine,V.Ambient.NewLine,V.Global.sBOm)
+		Function.Intrinsic.Control.EndIf
+		'Build Upload string
+		F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}{6}{7}{8}",V.uGlobal.uBOm(v.Local.iub)!Parent,v.uGlobal.uBOM(v.Local.iUB)!Seq,V.Local.sCount,V.uGlobal.uBOm(v.Local.iub)!Part,V.uGlobal.uBOm(v.Local.iub)!UM,V.uGlobal.uBOm(v.Local.iub)!desc,V.Local.sRev,V.uGlobal.uBOm(v.Local.iub)!Category,V.uGlobal.uBOm(v.Local.iub)!Source,V.Local.sLine)
+		F.Intrinsic.String.Build("{0}{1}{2}",V.global.sBom,V.Local.sLine,V.Ambient.NewLine,V.Global.sBOm)
+	Function.Intrinsic.Control.EndIf
+	f.ODBC.conx!rst.Close	
+	v.Local.sParent.Set(v.uGlobal.ubom(v.Local.iub)!Parent) 	
+F.Intrinsic.Control.Next(v.Local.iub) 
+
+F.Intrinsic.Control.If(V.Global.sBOM.trim,<>,"")
+	'post part batch
+	F.Intrinsic.Control.If(V.Global.bPartBatch,=,True)
+		F.Global.Inventory.PostPartBatch
+	F.Intrinsic.Control.EndIf
+	'Filepath	
+	F.Intrinsic.String.Build("{0}\{1}",V.Caller.FilesDir,"bomhdr.txt",V.Local.sFile)
+
+	F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bEx)
+	Function.Intrinsic.Control.If(V.Local.bEx,=,True)
+		F.Intrinsic.File.DeleteFile(V.Local.sFile)
+	Function.Intrinsic.Control.EndIf
+	'Save File
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Global.sBOM)
+
+
+
+
+	'Upload the BOM
+'	F.Intrinsic.Task.LaunchGSSSync("xsolidwk","-c",V.Caller.CompanyCode)
+	Function.Global.General.CallWrapperSync(50,"XSOLIDWK")
+Function.Intrinsic.Control.EndIf
+
+'==============BP============
+
+F.Intrinsic.Control.For(v.Local.iUB,0,v.uGlobal.uBOM.UBound,1)
+	f.Intrinsic.Control.If(v.uGlobal.uBOm(v.Local.iUB)!Memo2,<>,"")
+		f.Intrinsic.String.Build("Update BOM_ENG set MEMO_2 = '{0}' where PART = '{1}'",v.uGlobal.uBOm(v.Local.iUB)!Memo2,v.uGlobal.uBOm(v.Local.iUB)!Parent,v.Local.sSQL)
+		f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.uGlobal.uBOm(v.Local.iUB)!Source,=,"M")
+		f.Intrinsic.String.Build("Update BOM_MSTR set SOURCE = 'F' where PARENT = '{0}'",v.uGlobal.uBOm(v.Local.iUB)!Parent,v.Local.sSQL)
+		f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(v.Local.iUB)
+'============================
+F.Intrinsic.UI.ChangeWaitStatus("Uploading DCC items...")
+'load document control.
+Function.Intrinsic.Control.CallSub(Bom_dcc)
+F.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdUploadBOM_Click.End
+
+Program.Sub.FormBOM_UnLoad.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+Function.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.FormBOM_UnLoad.End
+
+Program.Sub.BOM_DCC.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.sPath.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iR.Declare(Long)
+V.Local.iID.Declare(Long)
+V.Local.sFilePath.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.bEx.Declare(Boolean)
+V.Local.sFQN.Declare(String)
+V.Local.sext.Declare(String)
+v.Local.sDocID.Declare(String)
+v.Local.sPartRet.Declare(String)
+
+V.Local.sPath.Set("\\STI-099\Shop Folder\Mechanical\PDF Drawings\")
+'make sure that directory exists.
+F.Intrinsic.File.DirExists(V.Local.sPath,V.Local.bEx)
+F.Intrinsic.Control.If(V.Local.bEx,=,False)
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+'get file list of all files contained within that directory.
+F.Intrinsic.File.GetFileList(V.Local.sPath,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+	F.Intrinsic.String.Split(V.Local.sRet,":",V.Local.sRet)
+	'Go to my uXMLCBOM UDT as that is my distinct Parent Bom's.
+	'check for any files that match that name.
+	'if so add dcc record.
+	F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uINV1.UBound,1)
+		F.Intrinsic.Control.For(V.Local.ir,0,V.Local.sRet.UBound,1)
+			f.Intrinsic.Control.If(v.uGlobal.uINV1(v.Local.iC)!AltDesc1.Trim,<>,"")	
+				F.Intrinsic.String.IsInString(V.Local.sRet(v.Local.iR),V.uGlobal.uINV1(v.Local.ic)!AltDesc1.left7,False,V.Local.bEx)
+				F.Intrinsic.Control.If(V.Local.bEx,=,True)
+				
+'					f.Intrinsic.Control.If(V.uGlobal.uINV1(v.Local.ic)!AltDesc1.left7,=,"A150602")
+'					F.Intrinsic.Debug.InvokeDebugger
+'					F.Intrinsic.Debug.Stop
+'					f.Intrinsic.Control.EndIf 
+					'means parent name combo is in there somewhere. lets' add it to dcc.
+					'tyep 30 for inventory since we don't have a BOm type.
+					F.Intrinsic.File.GetExtensionComponent(v.Local.sret(v.Local.iR),v.Local.sext)
+					F.Intrinsic.String.Build("{0}{1}",V.Local.spath,V.Local.sRet(v.Local.iR).Trim,V.Local.sFQN)
+					'still double check to make sure the part is valid. 
+					F.Global.Inventory.GetPartInfo(v.uGlobal.uINV1(v.Local.iC)!Part,"",v.Local.sPartRet) 
+					
+										
+					f.Intrinsic.Control.If(v.Local.sPartRet.Trim,<>,"***NOPARTFOUND***")			
+						'getlinkid first, create reference creates it even tho we may nay want to create it yet. 						
+						F.Global.DocumentControl.GetLinkID(v.uGlobal.uINV1(v.Local.ic)!Part.Trim,30,v.Local.iID)
+						Function.Intrinsic.Control.If(v.Local.iID,=,-1)
+							F.Global.DocumentControl.CreateReference(V.uGlobal.uINV1(v.Local.iC)!Part.Trim,30,V.Local.iID)
+						Function.Intrinsic.Control.EndIf
+						'check if the docu already exists or not. 										
+						F.Global.DocumentControl.GetDocumentID(v.Local.iID,v.Local.sRet(v.Local.iR),v.Local.sDocID) 
+						Function.Intrinsic.Control.If(v.Local.sDocID.Trim,=,"")
+							'should mean it doesn't exist so lets add that thing.
+							F.Global.DocumentControl.AddDocument(V.Local.iID,V.Local.sFQN,"Inv Upload",-1,V.Local.sext)
+						Function.Intrinsic.Control.EndIf
+					Function.Intrinsic.Control.EndIf
+				Function.Intrinsic.Control.EndIf						
+			Function.Intrinsic.Control.EndIf			
+		F.Intrinsic.Control.Next(V.Local.iR)
+	F.Intrinsic.Control.Next(V.Local.iC)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.BOM_DCC.End
+
+Program.Sub.FindDesignator.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.iC.Declare(Long) 
+v.Local.sRet.Declare(String) 
+v.Local.sReplace.Declare(String) 
+v.Local.sPart.Declare(String) 
+v.Local.sPart.Set(v.Args.part) 
+'then figure out what our designator is. 
+'reg expr to basically find the -N where n is a designator. 
+'have to ignore -FT,-L, and -R
+F.Intrinsic.String.RegExMatch(v.Local.sPart.Trim,"-[A-Z]$",True,v.Local.sRet) 
+Function.Intrinsic.Control.If(v.Local.sRet.Trim,<>,"")
+	F.Intrinsic.String.Split(v.local.sRet,"*!*",v.Local.sRet)
+	v.Local.iC.Set(v.Local.sret.UBound)
+Function.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.If(v.Local.sRet(v.Local.iC).Trim,=,"-L","OR",v.Local.sRet(v.Local.iC).Trim,=,"-R", v.Local.sRet(v.Local.ic).Trim,=,"-FT")
+'	'we ignore these and still add a designator. 
+	v.Local.sRet(v.Local.sRet.UBound).Set("") 	
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Variable.AddRV("sRet",v.Local.sRet(v.Local.sRet.UBound))
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.FindDesignator.End
+
+Program.Sub.FindPart.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.sPart.Declare(String) 
+v.Local.sMaterial.Declare(STring) 
+v.Local.sRet.Declare(String) 
+v.Local.sSQL.Declare(String) 
+v.Local.sDesignator.Declare(STring)
+v.Local.sFilters.Declare(String) 
+v.Local.iCount.Declare(Long) 
+v.Local.sT.Declare(String) 
+v.Local.sDesc.Declare(String)
+v.Local.sMaterial.Set(v.Args.Material) 
+v.Local.sPart.Set(v.Args.Part)
+v.Local.fRate.Declare(float)
+'find the designator of our part value. 
+F.Intrinsic.Control.CallSub(finddesignator,"Part",v.Local.sPart) 
+v.Local.sDesignator.Set(v.Args.sRet)
+'so the material is technically the description of the inventory part that we need, but it's not hte descip in the raw material inventory part..... cause that woul be too easy. 
+'we have to figure out the part number based on the description 
+'Ex:.179? (7 GA) ?MATERIAL? 
+'equates to Part: Will translate to SHT0179X60X120-S
+'.179 becomes 0179 and the 7-GA is related to the description. the -S
+'we have to reference the part no -? whatever to figure out it it's sheet or -n or -n
+'\([^()]*\)
+F.Intrinsic.String.UCase(v.Local.sMaterial,v.Local.sMaterial) 
+
+F.Intrinsic.String.RegExMatch(v.Local.sMaterial.Trim,"([^()]*)",True,v.Local.sRet) 
+F.Intrinsic.String.Split(v.Local.sRet,"@!@",v.Local.sRet) 
+F.Intrinsic.Control.If(v.Local.sRet.UBound,>=,2)
+	F.Intrinsic.String.Split(v.Local.sRet(0),"*!*",v.Local.sT)
+	'so in element zero that gives us our decimal that we need to manipulate. 
+	F.Intrinsic.String.Replace(v.Local.sT(1).Trim,".","0",v.Local.sRet(0))
+	F.Intrinsic.String.StripCharacters(v.Local.sRet(0).Trim,v.Local.sRet(0).Trim)	
+	'then if it's greater than 1000 that means that it's a whole number, set to 1000 
+	F.Intrinsic.Control.If(v.Local.sRet(0).Float,>,1000) 
+		'set to 1000 
+		v.Local.sRet(0).Set("1000") 
+	Function.Intrinsic.Control.EndIf
+	'Now the Stuff inside our parenthesis will be within the description 
+	F.Intrinsic.String.Split(v.Local.sRet(2),"*!*",v.Local.sT) 
+	'this is our Gage measurements to be used in the description
+	'get rid of spaces
+	F.Intrinsic.String.Replace(v.Local.sT(1).Trim," ","",v.Local.sT(1)) 
+	v.Local.sRet(2).Set(v.Local.sT(1).Trim) 
+	
+	'then we hve to figure out if it's -w or -n
+	'if it's -W we change to -S
+	'if 'N we change to -M
+	F.Intrinsic.Control.SelectCase(v.Local.sDesignator.Trim)
+		Function.Intrinsic.Control.Case("-W") 
+			v.Local.sDesignator.Set("-S")
+		Function.Intrinsic.Control.Case("-N")
+			v.Local.sDesignator.Set("-M")
+		Function.Intrinsic.Control.Case("-Y") 
+			v.Local.sDesignator.Set("-K") 
+		Function.Intrinsic.Control.Case("-C") 
+			v.Local.sDesignator.Set("-D") 
+	Function.Intrinsic.Control.EndSelect
+			
+	'prepare our sql query to find this raw material part number from Global Shop. 
+	F.Intrinsic.String.Build("Select * From V_INVENTORY_MSTR WHERE Part Like '%{0}%' And Part Like '%{1}' And Description Like '%{2}%'",v.Local.sRet(0).Trim,v.Local.sDesignator.Trim,v.Local.sRet(2).Trim,v.Local.sSQL) 
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",v.Local.sSQL) 
+	F.Intrinsic.Control.If(v.ODBC.conx!rst.EOF,<>,True) 
+		v.Local.sPart.Set(v.ODBC.conx!rst.FieldValTrim!Part) 
+		v.Local.sDesc.Set(v.ODBC.conx!rst.fieldvaltrim!Description)
+		v.Local.fRate.Set(v.ODBC.conx!rst.fieldval!Amt_Cost)
+	Function.Intrinsic.Control.Else 
+		v.Local.sPart.Set("") 
+		v.Local.sDesc.Set("")
+		v.Local.fRate.Set(0)
+	Function.Intrinsic.Control.EndIf
+	f.ODBC.conx!rst.Close 
+Function.Intrinsic.Control.Else 
+	v.Local.sPart.Set("") 
+	v.Local.sDesc.Set("")
+	v.Local.fRate.Set(0)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(v.Local.sPart.Trim,=,"") 
+	'we have to ask the user for the raw material part. 	
+	'check the Raw Material Node, if it's not blank use that. 
+	F.Intrinsic.Control.If(v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Raw_Material.Trim,=,"")
+		f.Intrinsic.String.Build("Serial Part Number: {1}{0}{0}Part Number:{2}{0}{0}Description:{3}{0}{0}Material Desc:{5}{0}{0}Designator:{4}",v.Ambient.tab,v.uGlobal.uXMLCopy(v.Global.iroutercounter)!Serial_Part_Number,v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Part_NO,v.uGlobal.uXMLCopy(v.Global.iroutercounter)!Description,v.Local.sDesignator,v.uGlobal.uXMLCopy(v.Global.iRouterCounter)!Material,v.Local.sError)
+	'	F.Intrinsic.String.Build("Raw Material with Description:{0} , and Designator: {1} could not be found. Please select from browser.",v.Local.sMaterial,v.Local.sDesignator,v.Local.sSQL) 
+'		F.Intrinsic.UI.MsgBoxExt("Error...",v.Local.sError)		
+		F.Intrinsic.Control.CallSub(ErrorLog,"Header","Raw Material For Router Can't be found.","Mess",v.Local.sError)		
+'		F.Intrinsic.Control.Label("Browser")
+'		F.Intrinsic.UI.Browser(105,"",v.Local.sRet) 
+		
+'		F.Intrinsic.Control.If(v.Local.sRet.Trim,<>,"***CANCEL***") 
+'			Function.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+			V.Local.sPart.Set(V.Local.sRet(0).Trim)
+'			v.Local.sDesc.Set(v.Local.sRet(2).Trim)	
+'		Function.Intrinsic.Control.Else 
+'			F.Intrinsic.UI.Msgbox("Part was not selected. Please retry.") 
+'			f.Intrinsic.Math.Add(v.Local.iCount,1,v.Local.iCount) 
+'			F.Intrinsic.Control.If(v.Local.iCount,<,2)
+'				F.Intrinsic.Control.GoTo("Browser")		
+'			Function.Intrinsic.Control.Else  Lik
+'				f.Intrinsic.UI.Msgbox("Ending...")			
+'				Function.Intrinsic.Control.CallSub(unload)
+'			f.Intrinsic.Control.endif		
+'		F.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.Else
+		'v.Local.sPart.Set(v.uGlobal.uXMLCopy(v.Global.iroutercounter)!Raw_Material) 
+		v.Local.sPart.Set("RM") 
+		'Function.Intrinsic.Control.CallSub(finddesignator,"Part",v.Local.sPart.Trim)
+		'Add Designator to Raw Material.		
+		Function.Intrinsic.Control.If(v.Args.sRet.Trim,=,"") 
+			F.Intrinsic.String.Build("{0}{1}",v.Local.sPart.Trim,v.Local.sDesignator.Trim,v.Local.sPart)	
+		Function.Intrinsic.Control.EndIf		
+		F.Intrinsic.String.Build("Select * From V_INVENTORY_MSTR Where Part = '{0}'",v.Local.sPart.Trim,v.Local.sSQL) 
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",v.Local.sSQL) 
+		F.Intrinsic.Control.If(v.ODBC.conx!rst.EOF,=,False) 
+			v.Local.sDesc.Set(v.ODBC.conx!rst.FieldValTrim!Description) 
+			v.Local.fRate.Set(v.ODBC.conx!rst.fieldval!Amt_Cost)
+		Function.Intrinsic.Control.Else 
+			f.Intrinsic.String.Build("Raw Material :{0}",v.Local.sPart.Trim,v.Local.sError)
+			Function.Intrinsic.Control.CallSub(errorlog,"Header","Raw Material information for Router not found in Inventory","Mess",v.Local.sError)
+'			F.Intrinsic.String.Build("Part {0} Not found in Inventory. Ending...",v.Local.spart.trim,v.Local.sSQL) 
+'			f.Intrinsic.UI.Msgbox(v.Local.sSQL,"Error...") 
+'			f.ODBC.conx!rst.Close
+'			f.Intrinsic.Control.CallSub(unload)			
+		Function.Intrinsic.Control.EndIf
+		f.ODBC.conx!rst.Close
+	Function.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.EndIf
+f.Intrinsic.Variable.AddRV("RawMaterial",v.Local.sPart) 
+Function.Intrinsic.Variable.AddRV("Description",v.Local.sDesc)
+Function.Intrinsic.Variable.AddRV("MRate",v.Local.fRate)
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.FindPart.End
+
+Program.Sub.BOM_UPL.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.sUDTParent.Declare(STring)
+v.Local.sUDTSerial.Declare(STring)
+v.Local.sUDTChild.Declare(String)
+v.Local.sParent.Declare(String) 
+v.Local.sChild.Declare(String) 
+v.Local.sRet.Declare(String)
+v.Local.iC.Declare(String) 
+v.Local.iUB.Declare(Long)
+v.Local.sLevel.Declare(String)
+v.Local.sPartInfo.Declare(String) 
+v.Local.bSpecial.Declare(Boolean)
+v.Local.sLine.Declare(String)
+v.Local.sCount.Declare(String) 
+v.Local.sSeq.Declare(String) 
+v.Local.iLen.Declare(Long)
+V.uGlobal.uBOM.Redim(-1,-1)
+v.uGlobal.uSerialParent.Redim(-1,-1)
+v.Local.sConveyor.Declare
+
+'go through  only looking for M type's
+'show wait dialog so they know something is going on.
+F.Intrinsic.UI.InvokeWaitDialog("Preparing BOM Review...")
+'Find our Top Level BOM Parent, level should be 0
+F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uXML!Level,0,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	F.Intrinsic.Control.If(v.uGlobal.uxml(v.Local.sret(0))!Parent.Length,>,20)
+		'we have to use serial number 
+		f.Intrinsic.Control.If(v.uGlobal.uxml(v.Local.sRet(0))!Serial_Part_Number.Trim,<>,"")
+			f.Intrinsic.String.RPad(v.uGlobal.uxml(v.Local.sRet(0))!Serial_Part_Number," ",20,v.uGlobal.uxml(v.Local.sret(0))!Serial_Part_Number)
+			gui.FormBOM.txtparent.Text(V.uGlobal.uXML(v.Local.sRet(0))!Serial_Part_Number.Left17)
+			gui.FormBOM.txtRev.Text(V.uGlobal.uXML(v.Local.sRet(0))!Serial_Part_Number.Right3)
+			gui.FormBOM.txtDescription.Text(V.uGlobal.uXML(v.Local.sRet(0))!Description)
+		Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.Else
+		f.Intrinsic.String.RPad(v.uGlobal.uxml(v.Local.sRet(0))!Parent," ",20,v.uGlobal.uxml(v.Local.sret(0))!Parent)
+		gui.FormBOM.txtparent.Text(V.uGlobal.uXML(v.Local.sRet(0))!Parent.Left17)
+		gui.FormBOM.txtRev.Text(V.uGlobal.uXML(v.Local.sRet(0))!Parent.Right3)
+		gui.FormBOM.txtDescription.Text(V.uGlobal.uXML(v.Local.sRet(0))!Description)
+	Function.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.EndIF
+'read my uXML. 
+
+F.Intrinsic.Control.For(v.Local.iC,v.uGlobal.uxml.LBound,v.uGlobal.uXML.UBound,1) 
+	v.Local.sUDTParent.set(v.uGlobal.uXML(v.Local.iC)!Parent) 
+	v.Local.sUDTSerial.Set(v.uGlobal.uXML(V.Local.iC)!Serial_Part_Number)
+	v.Local.sUDTChild.Set(v.uGlobal.uXML(v.Local.iC)!Original_Part_No) 	
+'	Function.Intrinsic.Control.If(V.Local.sUDTChild.Left24,=,"A151215-18-0-1-1-0-1-1-0")
+'		
+'
+'
+'
+'Function.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(v.uGlobal.uXML(v.Local.ic)!Source.Trim,=,"") 
+		f.Intrinsic.Control.If(v.uGlobal.uXML(v.Local.iC)!Parent.Left1,=,"A")
+			f.Intrinsic.Control.If(v.uGlobal.uXML(v.Local.ic)!Source.Trim,=,"")
+				v.uGlobal.uXML(v.Local.iC)!Source.Set("M")
+			Function.Intrinsic.Control.EndIf
+		Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.EndIf
+	'read the parent, if the left 1 is A or M, we have to check what level we are on. If we are on there we add to our uParentSerial UDT 
+	'Parent Section**********************************************s********************************************************************************
+	F.Intrinsic.Control.If(v.uGlobal.uXML(v.Local.iC)!Parent.left1,=,"A","OR",v.uGlobal.uXML(v.Local.iC)!Parent.left1,=,"M",v.uGlobal.uXML(v.Local.iC)!Parent.Length,>,20)
+		'have to find the node with that parent and the level should be zero
+		'check within our uSerialParent UDT for a match. 
+		F.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uSerialParent!sParent,v.uGlobal.uXML(v.Local.iC)!Parent,v.Local.sRet) 
+		Function.Intrinsic.Control.If(v.Local.sRet.Trim,=,"")
+		
+			'means we have not yet found this value attempt to find it.			
+			F.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uXML!Parent,v.uGlobal.uXML(v.Local.iC)!Parent,v.uGlobal.uXML!Level,1,v.Local.sRet)			
+			Function.Intrinsic.Control.If(v.Local.sRet.Trim,=,"") 
+				'we might be on the header record.
+				F.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uXML!Parent,v.uGlobal.uXML(v.Local.iC)!Parent,v.uGlobal.uXML!Level,0,v.Local.sRet)			
+			Function.Intrinsic.Control.EndIf			
+			
+			Function.Intrinsic.Control.If(v.Local.sRet.trim,<>,"") 
+				f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet) 
+				f.Intrinsic.Control.If(v.uGlobal.uSerialParent.UBound,=,-1) 
+					v.uGlobal.uSerialParent.Redim(0,0) 
+					v.Local.iUB.Set(0) 				
+				f.Intrinsic.Control.Else 
+					f.Intrinsic.Math.Add(v.uGlobal.uSerialParent.UBound,1,v.Local.iUB) 
+					v.uGlobal.uSerialParent.RedimPreserve(0,v.Local.iUB)
+				Function.Intrinsic.Control.EndIf			
+				'store it. 
+				v.uGlobal.uSerialParent(v.Local.iUB)!sParent.Set(v.uGlobal.uxml(v.Local.iC)!Parent) 
+				v.uGlobal.uSerialParent(v.Local.iUB)!sSerial.Set(v.uGlobal.uxml(v.Local.iC)!Serial_Part_Number) 			
+				'set our parent 
+				v.Local.sParent.Set(v.uGlobal.uSerialParent(v.Local.iUB)!sSerial)
+				v.Local.bSpecial.Set(True)			
+				'flag duplicate parents cause we don't want em.
+				f.Intrinsic.Variable.UDTMultiFlagDuplicates(v.uGlobal.uSerialParent!sParent) 
+				f.Intrinsic.Variable.UDTDeleteFlagged(v.uGlobal.uSerialParent) 		
+			Function.Intrinsic.Control.Else 
+				'parent with serial no and level 1 not found. Can't continue. cause we don't know what to use. 
+				F.Intrinsic.String.Build("Serial Number for Parent {0} can not be found.",v.uGlobal.uXML(v.Local.iC)!Parent,v.local.sError) 
+				F.Intrinsic.UI.Msgbox(v.Local.sError) 
+				Function.Intrinsic.Control.CallSub(unload)				
+			Function.Intrinsic.Control.Else 
+				'meaning we can't find a serial no and parent combincation. 
+				F.Intrinsic.UI.Msgbox("Parent can't be found.") 
+				Function.Intrinsic.Control.CallSub(unload)
+			Function.Intrinsic.Control.EndIf
+		Function.Intrinsic.Control.Else
+			'means it exists within our udt. 
+			f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet) 
+			v.Local.sParent.Set(v.uGlobal.uSerialParent(v.Local.sRet(v.Local.sRet.UBound))!sSerial) 		
+		Function.Intrinsic.Control.EndIf 
+	Function.Intrinsic.Control.Else 
+		'not special 
+		v.Local.bSpecial.Set(False)
+		'means our parent will be in our parent node. 
+		v.Local.sParent.set(v.uGlobal.uXML(v.Local.iC)!Parent) 		
+	Function.Intrinsic.Control.EndIf 	
+	'Parent Section******************************************************************************************************************************	END	
+
+
+	
+	'Child Part Section *************************************************************************************************************************   START
+	Function.Intrinsic.Control.If(v.Local.bSpecial,=,True) 
+		'if we are special we have to use the part no from the part no node, the A or M logic still applies. 
+		'find the child part number 
+		v.Local.sChild.Set(v.uGlobal.uXML(v.Local.iC)!Part_NO) 	
+'		v.Local.sChild.Set(v.uGlobal.uXML(v.Local.iC)!Original_Part_No)
+		'should we grab the original without the designator? and then ignore finding the designator?
+		f.Intrinsic.Control.If(v.Local.sChild.Trim,=,"") 
+			'grab from the serial number. 
+			v.Local.sChild.Set(v.uGlobal.uxml(v.Local.iC)!Serial_Part_Number)
+		Function.Intrinsic.Control.EndIf		
+		
+		Function.Intrinsic.Control.If(v.Local.sChild.left1,=,"A","OR",v.Local.sChild.left1,=,"M",v.Local.sChild.Length,>,20)
+'			F.Intrinsic.Control.CallSub(finddesignator,"Part",v.Local.sChild.Trim) 
+'			'the find designator will give us what's attached at the end of the part number, which contradicts what we are looking for here, so remove it. 
+'			Function.Intrinsic.Control.If(v.Args.sRet.trim,<>,"-R","AND",v.Args.sRet.trim,<>,"-L",v.Args.sRet.trim,<>,"-S")				
+''				F.Intrinsic.String.Replace(v.Local.sChild,v.Args.sRet,"",v.Local.sChild)				
+				'get length 
+'				F.Intrinsic.String.Len(v.Local.sChild,v.Local.iLen) 
+'				F.Intrinsic.Control.If(v.Local.sChild.right2,=,v.Args.sRet)
+'					'if our designator is equal to our last 2.Remove it. 
+'					F.Intrinsic.Math.Sub(v.Local.iLen,2,v.Local.iLen)
+'				Function.Intrinsic.Control.EndIf
+'				f.Intrinsic.String.Left(v.Local.sChild,v.Local.iLen,v.Local.sChild)							
+'			Function.Intrinsic.Control.EndIf
+			'the part no 
+			F.Intrinsic.variable.UDTMultiSeek(v.uGlobal.uSerialParent!sParent,v.Local.sChild,v.Local.sRet) 
+			Function.Intrinsic.Control.If(v.Local.sRet.Trim,=,"")
+				F.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uSerialParent!sParent,v.uGlobal.uXML(v.Local.iC)!Original_Part_No,v.Local.sRet) 
+			Function.Intrinsic.Control.EndIf			
+			
+			Function.Intrinsic.Control.If(v.Local.sret.Trim,<>,"")
+				f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet) 			
+				'ok now this is even more interesting. somewhere farther down the line we may hit values that we need to replace further up, 
+				F.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uBOM!Part,v.Local.sChild,v.uGlobal.uBOM!Part,v.uGlobal.uSerialParent(v.Local.sRet(0))!sSerial)						
+				v.Local.sChild.Set(v.uGlobal.uSerialParent(v.Local.sRet(0))!sSerial)							 
+			Function.Intrinsic.Control.EndIf
+			
+			'check to see if we changed it above. if we did leave it, if we did not then that means we are supposed to read from serial. A
+			'According to Mike we are not supposed to have any part numbers that start with an M as a child. 
+			F.Intrinsic.Control.If(v.Local.sChild.Left1,=,"M") 
+				'grab from serial no node if not blank 
+				f.Intrinsic.Control.If(v.uGlobal.uXML(v.Local.iC)!Serial_Part_Number.Trim,<>,"") 
+					'grab it. 
+					v.Local.sChild.Set(v.uGlobal.uxml(v.Local.ic)!Serial_Part_Number) 
+				Function.Intrinsic.Control.EndIf
+			Function.Intrinsic.Control.EndIf
+			
+		Function.Intrinsic.Control.EndIf		
+	Function.Intrinsic.Control.Else 
+		'if we are not special we use the serial part no node as the child, but if that's blank then we use the part no node. 
+		Function.Intrinsic.Control.If(v.uGlobal.uxml(v.Local.ic)!Serial_Part_Number.Trim,<>,"") 
+			v.Local.schild.Set(v.uGlobal.uxml(v.Local.iC)!Serial_Part_Number) 
+		Function.Intrinsic.Control.Else 
+			'use the Part_NO node. 
+			v.Local.sChild.Set(v.uGlobal.uxml(v.Local.iC)!Part_NO)			
+		Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.EndIf	
+	'Child Part Section *************************************************************************************************************************    END
+	'store these values within our uBOM UDT. 
+	Function.Intrinsic.Control.If(v.uGlobal.uBOM.UBound,=,-1) 
+		v.Local.iUB.Set(0) 
+		v.uGlobal.uBOM.Redim(0,0) 
+	Function.Intrinsic.Control.Else 
+		F.Intrinsic.Math.Add(v.uGlobal.ubom.UBound,1,v.Local.iUB)
+		v.uGlobal.uBOM.RedimPreserve(0,v.Local.iUB) 
+	Function.Intrinsic.Control.EndIf 
+	
+
+	'store them
+	'Parent
+	F.Intrinsic.String.RPad(v.Local.sParent," ",20,v.uGlobal.uBOM(v.Local.iUB)!Parent)
+	
+	'Child Part
+'	F.Intrinsic.String.RPad(v.Local.sChild," ",20,v.uGlobal.uBOM(v.Local.iUB)!Part)
+	F.Intrinsic.Control.If(v.Local.sChild.Length,>,20) 
+'		'have to pull from serial number if the part is greater than 20. 
+		F.Intrinsic.Control.If(v.uGlobal.uXML(v.Local.iC)!Serial_Part_Number.Trim,<>,"")
+''			use that instead. 
+			v.Local.sChild.Set(v.uGlobal.uXML(v.Local.ic)!Serial_Part_Number) 
+		Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.EndIf
+'	F.Intrinsic.String.RPad(v.Local.sChild," ",20,v.uGlobal.uBOM(v.Local.iUB)!Part)
+			
+	
+	v.uGlobal.uBOM(v.Local.iUB)!Part.Set(v.Local.sChild)
+	'store the orig part number for later removal. it will be easier. 
+	v.uGlobal.ubom(v.Local.iUB)!Orig_Part_NO.Set(v.uGlobal.uXML(v.Local.iC)!Original_Part_No)
+	
+	
+	'UM
+	V.uGlobal.uBOM(v.Local.iUB)!UM.Set("EA") 
+	
+	
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+	
+	'Desc
+	F.Intrinsic.String.RPad(V.uGlobal.uXMl(v.local.ic)!Description," ",30,V.uGlobal.uBOm(v.Local.iub)!Desc)
+
+'	f.Intrinsic.Control.If(v.uGlobal.ubom(v.Local.ic)!Part,=,v.Screen.FormBOM!txtParent.text)
+'		F.Intrinsic.String.RPad(V.uGlobal.uXMl(v.local.ic)!Description," ",30,v.Screen.FormBOM!txtDescription.text)
+'	f.Intrinsic.Control.Else
+'		F.Intrinsic.String.RPad(V.uGlobal.uXMl(v.local.ic)!Description," ",30,V.uGlobal.uBOm(v.Local.iub)!Desc)
+'	f.Intrinsic.Control.endif
+
+	'Quantity
+	v.uGlobal.uBOM(v.Local.iUB)!Quantity.Set(v.uGlobal.uXML(v.Local.iC)!Reference_Count) 
+	
+	'if level is zero set that to 1. 
+	Function.Intrinsic.Control.If(v.uGlobal.uXML(v.Local.iC)!Level,=,0) 
+		'set to 1. 
+		v.uGlobal.uXML(v.Local.iC)!Level.set(1) 
+	Function.Intrinsic.Control.EndIf
+	
+	'Level	
+	V.Local.sLevel.Set(v.uGlobal.uXML(v.Local.iC)!Level) 
+	F.Intrinsic.String.LPad(v.Local.sLevel.Trim," ",v.Local.sLevel.Long,v.Local.sLevel)
+	F.Intrinsic.String.Rpad(v.Local.sLevel,"*",8,V.uGlobal.uBOM(v.Local.iUB)!Level)
+		
+	'Seq
+	v.uGlobal.uBOM(v.Local.iUB)!Seq.Set(v.uGlobal.uXML(v.Local.iC)!Sequence)
+	
+	'BP - Memo2
+	v.uGlobal.uBOM(v.Local.iUB)!Memo2.Set(v.uGlobal.uXML(v.Local.iC)!SP) 	
+	
+	'Category
+	v.uGlobal.uBom(v.Local.iUB)!Category.Set("N") 
+	'Source
+	F.Intrinsic.String.RPad(v.uGlobal.uXML(v.Local.iC)!Source," ",1,v.uGlobal.uBOM(v.Local.iUB)!Source) 
+	
+	'Parent. 
+'	Function.Intrinsic.Control.CallSub(addparttobatch,"Source",v.uglobal.uBOM(v.local.iUB)!Source,"Part",v.uGlobal.uBOM(v.Local.iUB)!Parent,"Desc",v.uglobal.uBOM(v.local.iUB)!Description,"AltDesc",v.uglobal.uBOM(v.local.iUB)!Part_NO) 	
+	'F.Intrinsic.Control.CallSub(addparttobatch,"Source",v.uGlobal.uxml(v.Local.ic)!Source,"Part",v.uGlobal.ubom(v.Local.iub)!Parent,"Desc",v.uGlobal.uXML(v.Local.ic)!Description,"AltDesc",v.uGlobal.uXML(v.Local.iC)!Part_NO) 
+	
+	'BP - 03/03/2022
+		F.Intrinsic.Control.CallSub(addparttobatch,"Source",v.uGlobal.uxml(v.Local.ic)!Source,"Part",v.uGlobal.ubom(v.Local.iub)!Parent,"Desc",v.uGlobal.uXML(v.Local.ic)!Description,"AltDesc",v.uGlobal.uXML(v.Local.iC)!Part_NO,"Weight",v.uGlobal.uXML(v.Local.ic)!WEIGHT,"Vendor",v.uGlobal.uXML(v.Local.ic)!Vendor,"MFG_PART_W",v.uGlobal.uXML(v.Local.ic)!MANUF_PART_NO_WASHDOWN,"MFG_PART_NW",v.uGlobal.uXML(v.Local.ic)!MANUF_PART_NO_NON_WASHDOWN,"Memo_2",v.uGlobal.uXML(v.Local.ic)!SP) 
+		
+		'Part
+	'	Function.Intrinsic.Control.CallSub(addparttobatch,"Source",v.uglobal.uBOM(v.local.iUB)!Source,"Part",v.uGlobal.uBOM(v.Local.iUB)!Part,"Desc",v.uglobal.uBOM(v.local.iUB)!Description,"AltDesc",v.uglobal.uBOM(v.local.iUB)!Part_NO) 	
+		'F.Intrinsic.Control.CallSub(addparttobatch,"Source",v.uGlobal.uxml(v.Local.ic)!Source,"Part",v.uGlobal.ubom(v.Local.iub)!Part,"Desc",v.uGlobal.uXML(v.Local.ic)!Description,"AltDesc",v.uGlobal.uXML(v.Local.iC)!Part_NO) 
+		
+		'BP - 03/03/2022
+		F.Intrinsic.Control.CallSub(addparttobatch,"Source",v.uGlobal.uxml(v.Local.ic)!Source,"Part",v.uGlobal.ubom(v.Local.iub)!Part,"Desc",v.uGlobal.uXML(v.Local.ic)!Description,"AltDesc",v.uGlobal.uXML(v.Local.iC)!Part_NO,"Weight",v.uGlobal.uXML(v.Local.ic)!WEIGHT,"Vendor",v.uGlobal.uXML(v.Local.ic)!Vendor,"MFG_PART_W",v.uGlobal.uXML(v.Local.ic)!MANUF_PART_NO_WASHDOWN,"MFG_PART_NW",v.uGlobal.uXML(v.Local.ic)!MANUF_PART_NO_NON_WASHDOWN,"Memo_2",v.uGlobal.uXML(v.Local.ic)!SP) 
+	
+	F.Intrinsic.Control.If(v.uGlobal.uBOM(v.Local.iub)!Parent.Trim,=,v.uGlobal.uBOM(v.Local.iub)!Part.Trim) 
+		f.Intrinsic.Variable.UDTFlagOrdinal(v.uGlobal.ubom,True,v.Local.iUB) 
+	F.Intrinsic.Control.ElseIf(v.uGlobal.uBOM(v.Local.iub)!Parent.Trim,=,v.uGlobal.uBOM(v.Local.iub)!Orig_Part_NO.Trim) 
+		f.Intrinsic.Variable.UDTFlagOrdinal(v.uGlobal.ubom,True,v.Local.iUB) 
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(v.Local.iC)
+F.Intrinsic.Variable.UDTMultiFlag(V.uGlobal.uBOM!Seq,"0*******")
+'also delete where parent = child 
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uBOM)
+f.Intrinsic.Control.If(v.uGlobal.uBOM,<>,"")
+	Function.Intrinsic.Control.If(v.uGlobal.uBOM,<,0) 
+		Function.Intrinsic.Control.CallSub(unload) 
+	Function.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+
+
+gui.FormBOM.gsflexgrid2.LoadFromUDT("v.uglobal.uBom","Level::0*!*Part::1*!*Desc::2*!*UM::3*!*Category::4*!*Source::5*!*Parent::6*!*Quantity::7",2)
+Function.Intrinsic.UI.CloseWaitDialog
+f.Intrinsic.Control.UnBlockEvents
+gui.FormBOM..Show
+gui.FormBOM..WaitForDismiss
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.BOM_UPL.End
+
+Program.Sub.AddPartToBatch.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.sInfo.Declare(String) 
+v.Local.sPart.Declare(String)
+v.Local.sAltDesc.Declare(String)
+v.Local.iUB.Declare(Long)
+v.Local.sAltDesc.Redim(0,1)
+v.Local.sExtraDesc.Declare
+v.Local.sVendor.Declare
+v.Local.sVendor_Name.Declare
+v.Local.sMFG_Part.Declare
+v.Local.sMemo2.Declare
+v.Local.sSQL.Declare
+v.Local.sRet.Declare
+
+'args
+'source
+'Part
+'desc 
+'AltDesc
+v.Local.sAltDesc.Set(v.Args.AltDesc.Trim)
+
+
+'does part exist 
+'make sure we don't already have this part in our UDT> 
+
+F.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uINV1!Part,v.Args.Part.trim,v.Local.sInfo) 
+'have to check alt desc. if it's longer than 30 then we have to put the first 30 in alt 1 and next in alt 2. 
+Function.Intrinsic.Control.If(v.local.sAltDesc.length,>,30) 
+	'split 
+	F.Intrinsic.String.LimitSplit(v.Local.sAltDesc.Trim,30,v.Local.sAltDesc) 
+Function.Intrinsic.Control.EndIf 
+
+f.Intrinsic.Control.If(v.Local.sInfo.Trim,=,"")
+	F.Global.Inventory.GetPartInfo(v.Args.Part,"",V.Local.sInfo)
+	Function.Intrinsic.Control.If(v.Local.sInfo.Trim,=,"***NOPARTFOUND***") 
+		v.Global.bPartBatch.Set(True)
+		'if part is purchased source our product line will be 02, else it will be MC
+		Function.Intrinsic.Control.If(v.Args.Source,=,"P","OR",v.Args.Source,=,"Purchased")
+			F.Global.Inventory.AddPartToBatch(v.Args.Part,"EA",v.Args.Desc,"","02","P",v.Local.sAltDesc(0).Trim,v.Local.sAltDesc(1).Trim,"0","UPLOADED")	
+		Function.Intrinsic.Control.Else
+			'F.Global.Inventory.AddPartToBatch(v.Args.Part,"EA",v.Args.Desc,"","MC","M",v.Local.sAltDesc(0).Trim,v.Local.sAltDesc(1).Trim,"0","UPLOADED")
+			'BP - 03/03/2022 - all manufactured parts MJ  
+			F.Global.Inventory.AddPartToBatch(v.Args.Part,"EA",v.Args.Desc,"","MC","F",v.Local.sAltDesc(0).Trim,v.Local.sAltDesc(1).Trim,"0","UPLOADED")	
+		Function.Intrinsic.Control.EndIf
+		'store into our new uINV UDt. 
+		Function.Intrinsic.Control.If(v.uGlobal.uinv1.UBound,=,-1) 
+			v.uGlobal.uINV1.Redim(0,0) 
+			v.Local.iUB.Set(0) 
+		Function.Intrinsic.Control.Else 
+			f.Intrinsic.Math.Add(v.uGlobal.uINV1.UBound,1,v.Local.iUB) 
+			v.uGlobal.uINV1.RedimPreserve(0,v.Local.iUB) 
+		Function.Intrinsic.Control.EndIf
+		'store 
+		'used for later in the BOM-DCC SUBROUTINE.
+		v.uGlobal.uINV1(v.Local.iUB)!Part.set(v.Args.Part)
+		V.uGlobal.uINV1(v.Local.iUB)!AltDesc1.set(v.Local.sAltDesc(0).Trim) 			
+	Function.Intrinsic.Control.Else 
+		'we still want to store into our uDT> 
+		'store into our new uINV UDt. 
+		Function.Intrinsic.Control.If(v.uGlobal.uinv1.UBound,=,-1) 
+			v.uGlobal.uINV1.Redim(0,0) 
+			v.Local.iUB.Set(0) 
+		Function.Intrinsic.Control.Else 
+			f.Intrinsic.Math.Add(v.uGlobal.uINV1.UBound,1,v.Local.iUB) 
+			v.uGlobal.uINV1.RedimPreserve(0,v.Local.iUB) 
+		Function.Intrinsic.Control.EndIf
+		'store 
+		'used for later in the BOM-DCC SUBROUTINE.
+		v.uGlobal.uINV1(v.Local.iUB)!Part.set(v.Args.Part)
+		V.uGlobal.uINV1(v.Local.iUB)!AltDesc1.set(v.Local.sAltDesc(0).Trim) 		
+	Function.Intrinsic.Control.EndIf
+	
+'===================BP - 03/03/2022======================
+	v.Local.sExtraDesc.Set(v.Args.Desc.Trim)
+	v.Local.sVendor.Set(v.Args.Vendor.Trim)
+	v.Local.sMemo2.Set(v.Args.Memo_2.Trim)
+	'update extra description
+	f.Intrinsic.Control.If(v.local.sExtraDesc.length,>,30)
+		f.Intrinsic.String.Build("Update INV_EXTRA_TEXT set TEXT = '{0}' where RTRIM(PART) = '{1}'",v.Local.sExtraDesc,v.Args.Part.trim,v.Local.sSQL)
+		f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	'update weight
+	f.Intrinsic.String.Build("Update INVENTORY_MST2 set LBS = '{0}' where RTRIM(PART) = '{1}'",v.Args.Weight,v.Args.Part.trim,v.Local.sSQL)
+	f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	f.Intrinsic.Control.If(v.Global.Wash,=,"Wash Down")
+		v.Local.sMFG_Part.Set(v.Args.MFG_PART_W)
+	f.Intrinsic.Control.Else
+		v.Local.sMFG_Part.Set(v.Args.MFG_PART_NW)
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Build("Select RTRIM(NAME_VENDOR) from V_VENDOR_MASTER where RTRIM(VENDOR) = '{0}'",v.Local.sVendor,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sVendor_Name)
+	
+	'update source
+	Function.Intrinsic.Control.If(v.Args.Source,=,"M","OR",v.Args.Source,=,"Manufacture")
+		f.Intrinsic.String.Build("Update INVENTORY_MST2 set CODE_SOURCE = 'F' where RTRIM(PART) = '{0}'",v.Args.Part.trim,v.Local.sSQL)
+		f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+'		f.Intrinsic.String.Build("Update INVENTORY_MSTR set KEY_SOURCE = 'F' where RTRIM(PART) = '{0}'",v.Args.Part.trim,v.Local.sSQL)
+'		f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	Function.Intrinsic.Control.EndIf
+'	f.Intrinsic.String.Build("Select * from V_INV_CROSS_REF where RTRIM(PART) = '{0}'",v.Args.Part.trim,v.Local.sSQL)
+'	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+'	f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,False)
+'		f.Intrinsic.String.Build("Update INV_CROSS_REF set VENDOR = '{0}', MFG_NAME = '{1}', MFG_PART = '{2}' where RTRIM(PART) = '{3}'",v.Local.sVendor,v.Local.sVendor_Name,v.Local.sMFG_Part,v.Args.Part.trim,v.Local.sSQL)
+'	f.Intrinsic.Control.EndIf
+	
+	
+	f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	f.Intrinsic.String.Build("Select * from V_BOM_ENG where RTRIM(PART) = '{0}'",v.Args.Part.trim,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+	f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,False)
+		f.Intrinsic.String.Build("Update BOM_ENG set MEMO_2 = '{0}' where RTRIM(PART) = '{1}'",v.Local.sMemo2,v.Args.Part.trim,v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+'========================================================
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.AddPartToBatch.End
+
+Program.Sub.ErrorLog.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.iLenArray.Declare(Long) 
+v.Local.sMess.Declare(String) 
+v.Local.i.Declare(Long)
+v.Local.sMess.Set(v.Args.Mess) 
+F.Intrinsic.String.Split(v.Local.sMess,v.Ambient.Tab,v.Local.sMess) 
+Function.Intrinsic.Control.If(v.Local.sMess.UBound,>,0)
+	F.Intrinsic.Control.For(v.Local.i,0,v.Local.sMess.UBound,1)
+		Function.Intrinsic.Control.If(v.Local.sMess(v.Local.i).Trim,<>,"") 
+			f.Intrinsic.String.RPad(v.Local.sMess(v.Local.i).Trim," ",40,v.Local.sMess(v.Local.i)) 
+		Function.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(v.Local.i)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.String.Join(v.Local.sMess,v.Ambient.Tab,v.Local.sMess)
+'args are header and Mess 
+'message is coming from places through the program. 
+Function.Intrinsic.Control.If(v.Global.sError.Trim,=,"") 
+	F.Intrinsic.String.Build("File:{2}{3}{0}: {1}",V.Args.Header,v.local.sMess,v.Screen.F_File_Select!txtXMLFile.text,v.Ambient.NewLine,v.Global.sError)	
+Function.Intrinsic.Control.Else 
+	F.Intrinsic.String.Build("{0}{1}{2}: {3}",v.Global.sError,v.Ambient.NewLine,v.Args.Header,v.local.SMess,v.Global.serror)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.ErrorLog.End
+
+Program.Sub.WriteErrorLog.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.sFQN.Declare(String)
+v.Local.sFile.Declare(String)
+v.Local.bEx.declare(boolean) 
+
+F.Intrinsic.String.Build("UPLERROR{1}_{2}.txt",v.System.Temp,v.Caller.Terminal,v.Ambient.Now,v.Local.sFQN)
+F.Intrinsic.File.MakeFileNameFriendly(v.Local.sFQN,v.Local.sFQN)
+F.Intrinsic.String.Build("{0}\{1}",v.System.Temp,v.Local.sFQN,v.Local.sFQN) 
+
+f.Intrinsic.file.Exists(v.Local.sFQN,v.Local.bEx) 
+f.Intrinsic.Control.If(v.Local.bEx,=,True) 
+	f.Intrinsic.File.DeleteFile(v.Local.sFQN) 
+Function.Intrinsic.Control.EndIf
+f.Intrinsic.File.String2File(v.Local.sFQN,v.Global.serror) 
+F.Intrinsic.Task.ShellExec(v.Caller.Handle,"OPEN",v.Local.sFQN,"","",1) 
+f.Intrinsic.Variable.ArgExists("BOM",v.Local.bEx) 
+F.Intrinsic.Control.If(v.Local.bEx,=,false)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+
+Program.Sub.WriteErrorLog.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$Count Sheets by Sort Code	All
+${$5$}$2.0.0.0$}$2
+${$6$}$bpham$}$20220604143945350$}$Di0riF4Q5RIv6jxva5zSWBaTvp+T0Dt6O5p/wUwwMfVRioZVEmLFHLJtNYFlpeR7W+Y97WKRtwA=
+Program.Sub.Comments.End
